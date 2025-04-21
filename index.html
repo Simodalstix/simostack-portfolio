@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Parker Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-gray-200">
+    <!-- Main Grid Container with custom 3-column proportions -->
+    <div
+      class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_2fr_1fr] gap-6 p-4"
+    >
+      <!-- Left Column: Profile, Bio, Recent Role, and AWS Icons -->
+      <div class="bg-gray-800 p-6 rounded shadow space-y-6">
+        <div class="flex flex-col justify-between h-full">
+          <!-- Profile Section -->
+          <div class="text-center">
+            <img
+              src="assets/images/profile-pic/Profile_Picture.png"
+              alt="Profile"
+              class="rounded-full w-40 h-auto mx-auto border-4 border-white shadow-md"
+            />
+            <h2
+              class="text-2xl font-bold mt-4 border-b-2 border-indigo-500 pb-1"
+            >
+              Simon Parker
+            </h2>
+            <p class="font-semibold text-cyan-400 mt-2 mb-2 text-sm">
+              ~/scientist/pharmacist/engineer
+            </p>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              I’ve made the leap from healthcare to cloud. Backed by a decade of
+              professional experience, I bring reliability, clear communication,
+              and an intense drive to learn and build. From AWS and Python to
+              infrastructure and support, I’m hands-on, self-motivated, and
+              focused on solving meaningful problems with modern tech.
+            </p>
+
+            <!-- Recent Role Button (Compact Profile Section Version) -->
+            <div
+              onclick="openModal('roleModal')"
+              class="mx-auto mt-4 bg-gray-700 hover:bg-gray-600 border border-gray-600 hover:border-gray-400 transition duration-200 rounded flex items-center justify-between px-3 h-12 cursor-pointer gap-3"
+            >
+              <!-- Left Text -->
+              <div class="flex flex-col text-left leading-tight">
+                <p class="text-xs text-gray-200 font-medium">
+                  Customer Success
+                </p>
+                <p class="text-xs text-gray-400">Strongroom.AI</p>
+              </div>
+
+              <!-- Right Logo (Stretch to Button Height) -->
+              <div class="h-full">
+                <img
+                  src="assets/images/profile-pic/StrongroomLogo.jpg"
+                  alt="Company Logo"
+                  class="h-full w-auto object-cover rounded"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Powered by AWS Section -->
+          <section class="mt-6">
+            <h3
+              class="text-xl font-semibold mb-2 border-b-2 border-indigo-500 pb-1 text-center"
+            >
+              Website Powered by AWS
+            </h3>
+            <div class="flex justify-center gap-2">
+              <img
+                src="assets/images/aws-icons/SimpleStorageService.png"
+                alt="S3"
+                class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                onmouseover="updateAwsInfo('Amazon Simple Storage Service (S3) stores and serves all the static content for this website, including HTML, images, and assets.')"
+                onmouseout="resetAwsInfo()"
+              />
+              <img
+                src="assets/images/aws-icons/CloudFront.png"
+                alt="CloudFront"
+                class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                onmouseover="updateAwsInfo('Amazon CloudFront is a global Content Delivery Network (CDN) that caches and delivers this website quickly from edge locations.')"
+                onmouseout="resetAwsInfo()"
+              />
+              <img
+                src="assets/images/aws-icons/Route53.png"
+                alt="Route53"
+                class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                onmouseover="updateAwsInfo('Amazon Route 53 provides DNS routing, directing traffic from my custom domain to the CloudFront distribution')"
+                onmouseout="resetAwsInfo()"
+              />
+              <img
+                src="assets/images/aws-icons/CertificateManager.png"
+                alt="ACM"
+                class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                onmouseover="updateAwsInfo('AWS Certificate Manager (ACM) provisions and manages the free SSL certificate to enable secure HTTPS connections.')"
+                onmouseout="resetAwsInfo()"
+              />
+            </div>
+            <!-- Fixed-height info box to prevent layout shift -->
+            <div
+              id="awsInfoBox"
+              class="mt-4 text-center text-sm font-semibold text-gray-200 h-10 flex items-center justify-center"
+            >
+              Hover over an icon to learn more.
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Middle Column: Main Intro, Buttons, and Skills List -->
+      <div class="bg-gray-800 p-6 rounded shadow space-y-6">
+        <h1 class="text-2xl font-bold border-b-2 border-indigo-500 pb-1">
+          Ambition &amp; Career Pathway
+        </h1>
+        <p class="mt-4 text-sm text-gray-300">
+          I'm transitioning into cloud and DevOps with purpose — combining my
+          communication strength, customer success experience, and growing
+          confidence in backend systems and infrastructure. I’m progressively
+          building production-style projects and leaning into the parts of tech
+          that excite me: automation, cloud architecture, and real-world problem
+          solving. With hands-on work in AWS, Python, and SQL, I’m focused on
+          building practical, secure systems — and getting deeply familiar with
+          the AWS backbone that powers them. I’m especially drawn to containers
+          and orchestration, and I’m working toward deploying cloud-native apps
+          the right way. I’m ready to contribute to a fast-moving team, bring
+          clarity to complexity, and keep sharpening my edge.
+        </p>
+
+        <div class="mt-6 flex gap-2">
+          <button
+            onclick="openModal('skillsModal')"
+            class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition"
+          >
+            Currently Learning
+          </button>
+          <button
+            onclick="openModal('careerModal')"
+            class="bg-cyan-600 text-white px-4 py-2 rounded hover:bg-cyan-700 transition"
+          >
+            Career Pathways</button
+          ><button
+            onclick="openModal('projectsModal')"
+            class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition"
+          >
+            Projects
+          </button>
+        </div>
+        <div class="mt-6 bg-gray-700 p-4 rounded relative">
+          <h2 class="text-xl font-bold border-b-2 border-indigo-500 pb-1">
+            Current Skills &amp; Technologies
+          </h2>
+
+          <ul class="list-disc ml-4 mt-2 text-sm text-gray-300">
+            <li>SQL Server Administration &amp; Querying</li>
+            <li>Linux CLI, file structure, permissions, and services</li>
+            <li>Data Encryption Concepts: KMS, SSE, TLS</li>
+            <li>REST API Design &amp; Integration</li>
+            <li>HTTP Methods, Status Codes, TTL, Polling Techniques</li>
+            <li>Containers: Concepts, Usage, Benefits</li>
+            <li>Infrastructure as Code (AWS CDK, CloudFormation)</li>
+            <li>Serverless Architecture (Lambda, API Gateway, DynamoDB)</li>
+            <li>Networking: VPC, Subnets, DNS, Port Configuration</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Column: Certifications (Clickable to open modals) -->
+      <div class="bg-gray-800 p-6 rounded shadow">
+        <h2
+          class="text-xl font-semibold mb-4 text-center border-b-2 border-indigo-500 pb-1"
+        >
+          Certifications
+        </h2>
+        <div class="flex flex-col items-center space-y-4">
+          <img
+            src="assets/images/certifications/Cloud_Practitioner.png"
+            alt="Cloud Practitioner"
+            class="w-36 hover:border-2 hover:border-indigo-500 transition rounded cursor-pointer"
+            onclick="openModal('cloudModal')"
+          />
+          <img
+            src="assets/images/certifications/Solutions_Architect.png"
+            alt="Solutions Architect"
+            class="w-36 hover:border-2 hover:border-indigo-500 transition rounded cursor-pointer"
+            onclick="openModal('architectModal')"
+          />
+          <img
+            src="assets/images/certifications/Developer.png"
+            alt="Developer"
+            class="w-36 hover:border-2 hover:border-indigo-500 transition rounded cursor-pointer"
+            onclick="openModal('developerModal')"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals -->
+
+    <!-- Role Details Modal (Recent Role) -->
+    <div
+      id="roleModal"
+      onclick="if(event.target===this) closeModal('roleModal')"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center px-4"
+    >
+      <div
+        class="bg-gray-800 p-6 rounded max-w-md w-full max-h-[90vh] overflow-y-auto relative"
+      >
+        <button
+          onclick="closeModal('roleModal')"
+          class="absolute top-2 right-2 text-xl text-gray-200"
+        >
+          &times;
+        </button>
+
+        <h2 class="text-xl font-bold border-b-2 border-indigo-500 pb-1 mb-4">
+          What Happened<span class="text-red-500">!</span>
+        </h2>
+
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Unfortunately, Strongroom.AI entered voluntary administration in April
+          2025 due to operational and financial challenges, resulting in
+          approximately 50% of staff being made redundant — including my role.
+          Despite the short tenure, my time at Strongroom.AI solidified my
+          passion for tech, accelerated my skills in AWS and infrastructure, and
+          gave me the confidence to pursue a cloud and DevOps career path.
+        </p>
+      </div>
+    </div>
+
+    <!-- Learning Pathways Modal -->
+    <div
+      id="skillsModal"
+      onclick="if(event.target===this) closeModal('skillsModal')"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+    >
+      <!-- Use a flexible width: full width on small screens and max-width on large ones -->
+      <div
+        class="bg-gray-800 p-6 rounded w-11/12 md:w-3/4 lg:max-w-[900px] relative"
+      >
+        <button
+          onclick="closeModal('skillsModal')"
+          class="absolute top-2 right-2 text-xl text-gray-200"
+        >
+          &times;
+        </button>
+
+        <h2 class="text-2xl font-extrabold text-cyan-400 mb-4 text-center">
+          Learning Pathways
+        </h2>
+
+        <!-- Container for 3 rows -->
+        <div class="space-y-4">
+          <!-- Row 1 -->
+          <div
+            class="grid grid-cols-[1fr_3fr_1fr] items-start border-b border-purple-600 pb-4"
+          >
+            <!-- Left Column: Image -->
+            <div class="relative flex justify-center items-center">
+              <img
+                src="assets/images/skills-in-progress/LinuxEssentials-IconSize.png"
+                class="w-24"
+                alt="Linux Essentials Icon"
+              />
+              <!-- Completed tick icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="absolute top-1 right-1 w-7 h-7 bg-white rounded-full p-0.5 text-green-500 shadow"
+                aria-label="Completed"
+                role="img"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm-1 15l-5-5 
+       1.414-1.414L11 14.172l6.586-6.586L19 9z"
+                />
+              </svg>
+            </div>
+            <!-- Middle Column: Text -->
+            <div class="text-sm text-gray-300 leading-relaxed px-4">
+              Completed Linux Essentials, covering key topics in system
+              administration, networking, and troubleshooting. LPIC-1 remains a
+              longer-term goal for deeper Linux mastery but isn't an immediate
+              priority.
+            </div>
+            <!-- Right Column: Image -->
+            <div class="flex justify-center items-center">
+              <img
+                src="assets/images/skills-in-progress/LPIC-1-IconSize.png"
+                class="w-24"
+                alt="LPIC-1 Icon"
+              />
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div
+            class="grid grid-cols-[1fr_3fr_1fr] items-start border-b border-purple-600 pb-4"
+          >
+            <div class="relative flex justify-center items-center">
+              <img
+                src="assets/images/skills-in-progress/PythonAssociate.png"
+                class="w-24"
+                alt="Python Associate Icon"
+              /><!-- Completed tick icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="absolute top-1 right-1 w-7 h-7 bg-white rounded-full p-0.5 text-green-500 shadow"
+                aria-label="Completed"
+                role="img"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm-1 15l-5-5 
+       1.414-1.414L11 14.172l6.586-6.586L19 9z"
+                />
+              </svg>
+            </div>
+            <div class="text-sm text-gray-300 leading-relaxed px-4">
+              Completed my Python certification to build proper backend and
+              automation skills. I wanted structured training to deepen my
+              understanding of Python’s core concepts — not just how to use it,
+              but how to use it well. Planning to expand into Infrastructure as
+              Code (IaC) with Terraform next.
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="assets/images/skills-in-progress/TerraForm.svg"
+                class="w-24"
+                alt="Terraform Icon"
+              />
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div
+            class="grid grid-cols-[1fr_3fr_1fr] items-start pb-4 border-b border-purple-600"
+          >
+            <!-- Left Column: Flask + Nginx -->
+            <div class="flex justify-center items-center space-x-2">
+              <img
+                src="assets/images/skills-in-progress/flaskSVG.svg"
+                class="w-20"
+                alt="Flask Icon"
+              />
+              <img
+                src="assets/images/skills-in-progress/nginxSVG.svg"
+                class="w-20"
+                alt="Nginx Icon"
+              />
+            </div>
+
+            <!-- Middle Column: Description -->
+            <div class="text-sm text-gray-300 leading-relaxed px-4">
+              Putting Python into practice with Flask while exploring real-world
+              DevOps fundamentals using NGINX and Docker. This phase focuses on
+              deployment workflows and building infrastructure-aware
+              applications.
+            </div>
+
+            <!-- Right Column: Docker -->
+            <div class="flex justify-center items-center">
+              <img
+                src="assets/images/skills-in-progress/dockerSVG.svg"
+                class="w-24"
+                alt="Docker Icon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Career Pathways Modal -->
+    <div
+      id="careerModal"
+      onclick="if(event.target===this) closeModal('careerModal')"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+    >
+      <div class="bg-gray-800 p-6 rounded w-11/12 md:w-3/4 relative">
+        <button
+          onclick="closeModal('careerModal')"
+          class="absolute top-2 right-2 text-xl text-gray-200"
+        >
+          &times;
+        </button>
+
+        <h2 class="text-2xl font-extrabold text-cyan-400 mb-4 text-center">
+          Career Pathways
+        </h2>
+
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- DevOps Engineer -->
+          <div class="flex-1 flex flex-col justify-between text-center">
+            <div>
+              <h3 class="text-xl font-semibold mb-2 text-white">
+                DevOps Engineer
+              </h3>
+              <p class="text-sm text-gray-300 leading-relaxed">
+                Learning about automation and modern DevOps practices has been a
+                really pleasant surprise — it’s powerful, efficient, and a huge
+                step up from the manual, legacy systems I was used to. I’d love
+                to be in a role where I can keep building on this knowledge,
+                pursue certifications, and keep improving my ability to design
+                clean, reliable systems.
+              </p>
+            </div>
+            <div class="flex justify-center gap-4 mt-4">
+              <img
+                src="assets/images/career-pathways/DevopsPro.png"
+                class="w-24"
+              />
+              <img
+                src="assets/images/career-pathways/TerraForm.svg"
+                class="w-24"
+              />
+            </div>
+          </div>
+
+          <div
+            class="border-t md:border-t-0 md:border-l border-purple-600"
+          ></div>
+
+          <!-- Cloud Engineer -->
+          <div class="flex-1 flex flex-col justify-between text-center">
+            <div>
+              <h3 class="text-xl font-semibold mb-2 text-white">
+                Cloud Engineer
+              </h3>
+              <p class="text-sm text-gray-300 leading-relaxed">
+                I just want to be part of this ecosystem — I love how clean and
+                structured everything feels, from the service architecture to
+                concepts like IAM and identity control. It’s technology I
+                genuinely want to use day-to-day. I’m excited to keep building
+                on this knowledge, pursue further certifications, and apply
+                these skills in a real-world cloud engineering role.
+              </p>
+            </div>
+            <div class="flex justify-center gap-4 mt-4">
+              <img
+                src="assets/images/career-pathways/SysOps.png"
+                class="w-24"
+              />
+              <img
+                src="assets/images/career-pathways/Security.png"
+                class="w-24"
+              />
+            </div>
+          </div>
+
+          <div
+            class="border-t md:border-t-0 md:border-l border-purple-600"
+          ></div>
+
+          <!-- Full Stack Developer -->
+          <div class="flex-1 flex flex-col justify-between text-center">
+            <div>
+              <h3 class="text-xl font-semibold mb-2 text-white">
+                Full Stack Developer
+              </h3>
+              <p class="text-sm text-gray-300 leading-relaxed">
+                I want to build full stack projects because it helps me
+                understand how everything fits together. Working across the
+                whole stack makes me better at every part of it — whether that's
+                backend, infrastructure, or cloud. This website is a window into
+                that learning journey — a place for me to build, experiment, and
+                show that I'm always improving and adding new skills.
+              </p>
+            </div>
+            <div class="flex justify-center gap-4 mt-4">
+              <img
+                src="assets/images/career-pathways/React.png"
+                class="w-16 h-auto object-contain"
+              />
+              <img
+                src="assets/images/career-pathways/Python2Snakes.svg"
+                class="w-16 h-auto object-contain"
+              />
+              <img
+                src="assets/images/career-pathways/postgresqlSVG.svg"
+                class="w-16 h-auto object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Modal -->
+    <div
+      id="projectsModal"
+      onclick="if(event.target===this) closeModal('projectsModal')"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+    >
+      <div class="bg-gray-800 p-6 rounded w-11/12 md:w-3/4 relative">
+        <button
+          onclick="closeModal('projectsModal')"
+          class="absolute top-2 right-2 text-xl text-gray-200"
+        >
+          &times;
+        </button>
+        <h2 class="text-2xl font-extrabold text-cyan-400 mb-4 text-center">
+          Projects
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Project 1 -->
+          <div
+            class="p-4 border border-gray-600 rounded bg-gray-700 flex flex-col text-center"
+          >
+            <h3 class="text-white text-base font-semibold mb-2">
+              Portfolio Website (This Project)
+            </h3>
+            <p class="text-xs text-gray-300">
+              Built from scratch to showcase my skills, creativity, and
+              understanding of development concepts. Responsive design with
+              Tailwind CSS and AWS-powered deployment. This site will evolve
+              over time as I expand my knowledge and add new features.
+            </p>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="p-4 border border-gray-600 rounded bg-gray-700 flex flex-col text-center"
+          >
+            <h3 class="text-white text-base font-semibold mb-2">
+              SQL Server Migration to AWS RDS
+            </h3>
+            <p class="text-xs text-gray-300">
+              Designed architecture for migrating an on-premises SQL Express
+              database to AWS RDS. Automated infrastructure with CloudFormation,
+              configured AWS DMS for data replication, implemented VPN access,
+              and overcame real-world networking challenges.
+            </p>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="p-4 border border-gray-600 rounded bg-gray-700 flex flex-col text-center"
+          >
+            <h3 class="text-white text-base font-semibold mb-2">
+              NGINX, Docker & PostgreSQL Lab (Planned)
+            </h3>
+            <p class="text-xs text-gray-300">
+              Upcoming infrastructure project using NGINX for reverse proxy,
+              Docker containers for isolated environments, and PostgreSQL for
+              database management. Will deploy a Flask API backend on AWS
+              Fargate for a real-world, containerized architecture.
+            </p>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="p-4 border border-gray-600 rounded bg-gray-700 flex flex-col text-center"
+          >
+            <h3 class="text-gray-400 text-base font-semibold mb-2">
+              More Projects Coming Soon
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certification Modals -->
+
+    <!-- Cloud Practitioner Modal -->
+    <div
+      id="cloudModal"
+      onclick="if(event.target===this) closeModal('cloudModal')"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+    >
+      <div class="bg-gray-800 p-6 rounded w-11/12 md:w-3/4 relative">
+        <button
+          onclick="closeModal('cloudModal')"
+          class="absolute top-2 right-2 text-xl text-gray-200"
+        >
+          &times;
+        </button>
+        <h2 class="text-xl font-bold border-b-2 border-indigo-500 pb-1 mb-4">
+          AWS Certified Cloud Practitioner
+        </h2>
+        <p class="text-sm text-gray-300 mb-2">
+          Issued by Amazon Web Services Training and Certification
+        </p>
+        <p class="text-sm text-gray-300">
+          Earners of this certification have a fundamental understanding of IT
+          services and their uses in the AWS Cloud. They demonstrated cloud
+          fluency and foundational AWS knowledge. Certification holders can
+          identify essential AWS services necessary for setting up AWS-focused
+          projects.
+          <a
+            href="https://www.credly.com/badges/174cafbb-a6a8-4e96-afad-d2db977761e2"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-cyan-400 hover:text-cyan-300 underline block mt-3"
+          >
+            → Verify Certification on Credly
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Solutions Architect Modal -->
+    <div
+      id="architectModal"
+      onclick="if(event.target===this) closeModal('architectModal')"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+    >
+      <div class="bg-gray-800 p-6 rounded w-11/12 md:w-3/4 relative">
+        <button
+          onclick="closeModal('architectModal')"
+          class="absolute top-2 right-2 text-xl text-gray-200"
+        >
+          &times;
+        </button>
+        <h2 class="text-xl font-bold border-b-2 border-indigo-500 pb-1 mb-4">
+          AWS Certified Solutions Architect – Associate
+        </h2>
+        <p class="text-sm text-gray-300 mb-2">
+          Issued by Amazon Web Services Training and Certification
+        </p>
+        <p class="text-sm text-gray-300">
+          Earners of this certification have a comprehensive understanding of
+          AWS services and technologies. They demonstrated the ability to design
+          secure and robust solutions using architectural design principles
+          based on customer requirements. Certification holders can
+          strategically design well-architected distributed systems that are
+          scalable, resilient, efficient, and fault-tolerant.
+          <a
+            href="https://www.credly.com/badges/7eea6cbf-d1ac-4006-b031-896c63f04041"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-cyan-400 hover:text-cyan-300 underline block mt-3"
+          >
+            → Verify Certification on Credly
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Developer Modal -->
+    <div
+      id="developerModal"
+      onclick="if(event.target===this) closeModal('developerModal')"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+    >
+      <div class="bg-gray-800 p-6 rounded w-11/12 md:w-3/4 relative">
+        <button
+          onclick="closeModal('developerModal')"
+          class="absolute top-2 right-2 text-xl text-gray-200"
+        >
+          &times;
+        </button>
+        <h2 class="text-xl font-bold border-b-2 border-indigo-500 pb-1 mb-4">
+          AWS Certified Developer – Associate
+        </h2>
+        <p class="text-sm text-gray-300 mb-2">
+          Issued by Amazon Web Services Training and Certification
+        </p>
+        <p class="text-sm text-gray-300">
+          Earners of this certification have a comprehensive understanding of
+          application life-cycle management. They demonstrated proficiency in
+          writing applications using AWS service APIs, AWS CLI, and SDKs; using
+          containers; and deploying with a CI/CD pipeline. Certification holders
+          can develop, deploy, and debug cloud-based applications following AWS
+          best practices.
+          <a
+            href="https://www.credly.com/badges/e90f09fd-d161-465a-93e1-bcfb7375635a"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-cyan-400 hover:text-cyan-300 underline block mt-3"
+          >
+            → Verify Certification on Credly
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function openModal(id) {
+        document.getElementById(id).classList.remove("hidden");
+      }
+      function closeModal(id) {
+        document.getElementById(id).classList.add("hidden");
+      }
+      function updateAwsInfo(text) {
+        document.getElementById("awsInfoBox").innerText = text;
+      }
+      function resetAwsInfo() {
+        document.getElementById("awsInfoBox").innerText =
+          "Hover over an icon to learn more.";
+      }
+    </script>
+  </body>
+</html>
