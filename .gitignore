@@ -1,0 +1,35 @@
+# Node.js / Build tools (in case you add Vite, Webpack, etc.)
+node_modules/
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Editor/OS junk
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# AWS CLI or deployment artifacts (if you sync S3 or build locally)
+.aws-sam/
+*.zip
+*.tar.gz
+.cache/
+
+# Output folders from build tools you might explore later
+.next/
+.out/
+.svelte-kit/
+public/build/
+.sass-cache/
+coverage/

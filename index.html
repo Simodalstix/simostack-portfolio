@@ -20,7 +20,7 @@
   <body class="bg-gray-900 text-gray-200">
     <!-- Main Grid Container with custom 3-column proportions -->
     <div
-      class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_2fr_1fr] gap-6 p-4"
+      class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_2.2fr_1fr] gap-6 p-4"
     >
       <!-- Left Column: Profile, Bio, Recent Role, and AWS Icons -->
       <div class="bg-gray-800 p-6 rounded shadow space-y-6">
@@ -107,6 +107,25 @@
                 class="w-10 cursor-pointer rounded-md hover:opacity-80"
                 onmouseover="updateAwsInfo('AWS Certificate Manager (ACM) provisions and manages the free SSL certificate to enable secure HTTPS connections.')"
                 onmouseout="resetAwsInfo()"
+              /><img
+                src="assets/images/aws-icons/APIGateway.svg"
+                alt="S3"
+                class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                onmouseover="updateAwsInfo('Amazon API Gateway securely handles all API requests and routes them to backend services.')"
+                onmouseout="resetAwsInfo()"
+              /><img
+                src="assets/images/aws-icons/Lambda.svg"
+                alt="S3"
+                class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                onmouseover="updateAwsInfo('AWS Lambda runs backend code automatically in response to events — no servers to manage.')"
+                onmouseout="resetAwsInfo()"
+              />
+              <img
+                src="assets/images/aws-icons/DynamoDB.svg"
+                alt="S3"
+                class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                onmouseover="updateAwsInfo('Amazon DynamoDB is a fast, serverless NoSQL database used to store API data reliably.')"
+                onmouseout="resetAwsInfo()"
               />
             </div>
             <!-- Fixed-height info box to prevent layout shift -->
@@ -177,32 +196,44 @@
         </div>
       </div>
 
-      <!-- Right Column: Certifications (Clickable to open modals) -->
-      <div class="bg-gray-800 p-6 rounded shadow">
-        <h2
-          class="text-xl font-semibold mb-4 text-center border-b-2 border-indigo-500 pb-1"
-        >
-          Certifications
-        </h2>
-        <div class="flex flex-col items-center space-y-4">
-          <img
-            src="assets/images/certifications/Cloud_Practitioner.png"
-            alt="Cloud Practitioner"
-            class="w-36 hover:border-2 hover:border-indigo-500 transition rounded cursor-pointer"
-            onclick="openModal('cloudModal')"
-          />
-          <img
-            src="assets/images/certifications/Solutions_Architect.png"
-            alt="Solutions Architect"
-            class="w-36 hover:border-2 hover:border-indigo-500 transition rounded cursor-pointer"
-            onclick="openModal('architectModal')"
-          />
-          <img
-            src="assets/images/certifications/Developer.png"
-            alt="Developer"
-            class="w-36 hover:border-2 hover:border-indigo-500 transition rounded cursor-pointer"
-            onclick="openModal('developerModal')"
-          />
+      <!-- Right Column: Certifications -->
+      <div
+        class="bg-gray-800 p-6 rounded shadow flex flex-col justify-between h-full"
+      >
+        <!-- TOP BLOCK: heading + icons -->
+        <div>
+          <h2
+            class="text-xl font-semibold text-center border-b-2 border-indigo-500 pb-1 mb-4"
+          >
+            Certifications
+          </h2>
+          <div class="flex flex-col items-center space-y-4">
+            <img
+              src="assets/images/certifications/Cloud_Practitioner.png"
+              alt="Cloud Practitioner"
+              class="w-36 hover:border-2 hover:border-indigo-500 transition rounded cursor-pointer"
+              onclick="openModal('cloudModal')"
+            />
+            <img
+              src="assets/images/certifications/Solutions_Architect.png"
+              alt="Solutions Architect"
+              class="w-36 hover:border-2 hover:border-indigo-500 transition rounded cursor-pointer"
+              onclick="openModal('architectModal')"
+            />
+            <img
+              src="assets/images/certifications/Developer.png"
+              alt="Developer"
+              class="w-36 hover:border-2 hover:border-indigo-500 transition rounded cursor-pointer"
+              onclick="openModal('developerModal')"
+            />
+          </div>
+        </div>
+
+        <!-- BOTTOM BLOCK: visitor count -->
+        <div class="text-sm text-gray-400 text-center">
+          Visited
+          <span id="visitor-count" class="font-bold text-purple-400">?</span>
+          times.
         </div>
       </div>
     </div>
@@ -689,6 +720,22 @@
         </p>
       </div>
     </div>
+    <script>
+      fetch(
+        "https://your-api-url.execute-api.ap-southeast-2.amazonaws.com/Prod/count",
+        {
+          headers: {
+            "x-api-key": "UqkDT1O9VB6zi6jtUYRQK9XWnGJFRe8m7ckSm7MC",
+          },
+        }
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          document.getElementById("visitor-count").innerText =
+            data.visitor_count;
+        })
+        .catch((err) => console.error("Visitor count API failed:", err));
+    </script>
 
     <script>
       function openModal(id) {
