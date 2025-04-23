@@ -538,7 +538,7 @@
       class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
     >
       <div
-        class="bg-gray-800 p-6 rounded w-11/12 md:w-3/4 relative text-gray-200"
+        class="bg-gray-800 p-6 rounded w-11/12 md:w-3/4 relative text-gray-200 max-h-[90vh] overflow-y-auto"
       >
         <button
           onclick="closeModal('projectsModal')"
@@ -596,7 +596,7 @@
                   />
                   <div class="relative w-10 h-10 bg-white rounded-md">
                     <img
-                      src="assets/images/project-icons/reactSVG.svg"
+                      src="assets/images/project-icons/ReactBlack.svg"
                       alt="React Icon"
                       class="w-full h-full object-contain rounded-md border-2 border-green-400"
                     />
@@ -1020,7 +1020,7 @@
     <script>
       if (!location.href.startsWith("file://")) {
         fetch(
-          "https://your-api-url.execute-api.ap-southeast-2.amazonaws.com/Prod/count",
+          "https://hcqozthml9.execute-api.ap-southeast-2.amazonaws.com/Prod/count",
           {
             headers: {
               "x-api-key": "UqkDT1O9VB6zi6jtUYRQK9XWnGJFRe8m7ckSm7MC",
