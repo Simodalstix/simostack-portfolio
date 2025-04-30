@@ -11,6 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
     <style>
       body {
         font-family: "Inter", sans-serif;
@@ -145,17 +147,15 @@
           Ambition &amp; Career Pathway
         </h1>
         <p class="mt-4 text-sm text-gray-300">
-          I'm transitioning into cloud and DevOps with purpose — combining my
-          communication strength, customer success experience, and growing
-          confidence in backend systems and infrastructure. I’m progressively
-          building production-style projects and leaning into the parts of tech
-          that excite me: automation, cloud architecture, and real-world problem
-          solving. With hands-on work in AWS, Python, and SQL, I’m focused on
-          building practical, secure systems — and getting deeply familiar with
-          the AWS backbone that powers them. I’m especially drawn to containers
-          and orchestration, and I’m working toward deploying cloud-native apps
-          the right way. I’m ready to contribute to a fast-moving team, bring
-          clarity to complexity, and keep sharpening my edge.
+          I’m transitioning into cloud and DevOps by building real projects that
+          push me to apply what I’m learning. Right now, I’m working with my
+          brother on a full stack solution for a paying client — handling the
+          backend and cloud infrastructure using AWS and Python. I’m also
+          learning Terraform to strengthen my IaC skills because I know how
+          important it is for doing things properly. I may be new to the
+          industry, but I’m moving fast, building with intent, and learning in a
+          way that sticks — and I’m confident I’ll outpace expectations with the
+          right opportunity. Keep an eye on me — I’m just getting started.
         </p>
 
         <div class="mt-6 flex gap-2">
@@ -163,7 +163,7 @@
             onclick="openModal('skillsModal')"
             class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition"
           >
-            Currently Learning
+            Learning
           </button>
           <button
             onclick="openModal('careerModal')"
@@ -175,6 +175,12 @@
             class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition"
           >
             Projects
+          </button>
+          <button
+            onclick="openModal('collabModal')"
+            class="bg-cyan-600 text-white px-4 py-2 rounded hover:bg-cyan-700 transition"
+          >
+            Collaboration
           </button>
         </div>
         <div class="mt-6 bg-gray-700 p-4 rounded relative">
@@ -362,11 +368,14 @@
               </svg>
             </div>
             <div class="text-sm text-gray-300 leading-relaxed px-4">
-              Completed my Python certification to build proper backend and
-              automation skills. I wanted structured training to deepen my
-              understanding of Python’s core concepts — not just how to use it,
-              but how to use it well. Planning to expand into Infrastructure as
-              Code (IaC) with Terraform next.
+              Completed my Python certification to build solid backend and
+              automation skills. I wanted structured training to truly
+              understand Python’s core concepts — not just how to use it, but
+              how to use it well. I’m now diving deep into Terraform to
+              strengthen my Infrastructure as Code (IaC) skills and bring
+              repeatable, cloud-native workflows into real projects, with my eye
+              on the Terraform Associate (003) certification as a next
+              milestone.
             </div>
             <div class="flex justify-center items-center">
               <img
@@ -397,10 +406,12 @@
 
             <!-- Middle Column: Description -->
             <div class="text-sm text-gray-300 leading-relaxed px-4">
-              Putting Python into practice with Flask while exploring real-world
-              DevOps fundamentals using NGINX and Docker. This phase focuses on
-              deployment workflows and building infrastructure-aware
-              applications.
+              I began exploring real-world DevOps fundamentals with Flask,
+              NGINX, and Docker — focusing on deployment workflows and
+              infrastructure-aware apps. While my current focus has shifted to a
+              full stack client project, I still see this area as essential and
+              plan to return to it to deepen my container and service
+              orchestration skills.
             </div>
 
             <!-- Right Column: Docker -->
@@ -898,6 +909,102 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- collabmodal -->
+    <div
+      id="collabModal"
+      onclick="if(event.target===this) closeModal('collabModal')"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center px-4"
+    >
+      <div
+        class="bg-gray-800 p-6 rounded w-11/12 md:w-3/4 lg:max-w-[900px] relative max-h-[90vh] overflow-y-auto"
+      >
+        <button
+          onclick="closeModal('collabModal')"
+          class="absolute top-2 right-2 text-xl text-gray-200"
+        >
+          &times;
+        </button>
+
+        <h2 class="text-2xl font-extrabold text-cyan-400 mb-4 text-center">
+          Active Client Project
+        </h2>
+
+        <!-- Tech Stack Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+          <!-- Item 1 -->
+          <div class="text-center">
+            <img
+              src="assets/images/collaboration/react.svg"
+              class="w-20 mx-auto mb-2 rounded-md"
+              alt="React"
+            />
+            <p class="text-sm text-gray-300">
+              React powers our frontend. It's a widely adopted library for
+              building interactive UIs with reusable components.
+            </p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="text-center">
+            <img
+              src="assets/images/collaboration/strapi.png"
+              class="w-20 mx-auto mb-2 rounded-md"
+              alt="Strapi"
+            />
+            <p class="text-sm text-gray-300">
+              Strapi is an open-source headless CMS that acts as the backend for
+              our content.
+            </p>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="text-center">
+            <img
+              src="assets/images/collaboration/apprunner.svg"
+              class="w-20 mx-auto mb-2 rounded-md"
+              alt="AppRunner"
+            />
+            <p class="text-sm text-gray-300">
+              AWS App Runner deploys our web applications from source or
+              container with zero infrastructure management.
+            </p>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="text-center">
+            <img
+              src="assets/images/collaboration/aurora.svg"
+              class="w-20 mx-auto mb-2 rounded-md"
+              alt="Aurora"
+            />
+            <p class="text-sm text-gray-300">
+              Aurora Serverless gives us a fully managed relational database
+              that auto-scales based on demand.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom Description -->
+        <div
+          class="bg-gray-700 p-4 rounded text-sm text-gray-300 leading-relaxed"
+        >
+          <div
+            class="bg-gray-700 p-4 rounded text-base text-gray-300 leading-relaxed"
+          >
+            My brother and I are building a real solution for a paying customer
+            — and the core stack is already running smoothly. I’ve set up the
+            cloud infrastructure and database (Aurora Serverless), and we’re
+            using Strapi to streamline the backend. It feels like such a modern
+            and intelligent setup. The next phase is developing the frontend,
+            which I’ll deploy using AWS App Runner with a GitHub Actions
+            pipeline. It’s been incredibly satisfying to see a full stack
+            project come to life — I’m genuinely putting my skills to work,
+            handling the backend and cloud architecture so my brother can focus
+            on the frontend.
           </div>
         </div>
       </div>
