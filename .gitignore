@@ -33,3 +33,5 @@ yarn-error.log*
 public/build/
 .sass-cache/
 coverage/
+
+*.Zone.Identifier

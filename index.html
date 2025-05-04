@@ -22,7 +22,7 @@
   <body class="bg-gray-900 text-gray-200">
     <!-- Main Grid Container with custom 3-column proportions -->
     <div
-      class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_2.2fr_1fr] gap-6 p-4"
+      class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.6fr_2.8fr_0.9fr] gap-6 p-4"
     >
       <!-- Left Column: Profile, Bio, Recent Role, and AWS Icons -->
       <div class="bg-gray-800 p-6 rounded shadow space-y-6">
@@ -147,15 +147,19 @@
           Ambition &amp; Career Pathway
         </h1>
         <p class="mt-4 text-sm text-gray-300">
-          I’m transitioning into cloud and DevOps by building real projects that
-          push me to apply what I’m learning. Right now, I’m working with my
-          brother on a full stack solution for a paying client — handling the
-          backend and cloud infrastructure using AWS and Python. I’m also
-          learning Terraform to strengthen my IaC skills because I know how
-          important it is for doing things properly. I may be new to the
-          industry, but I’m moving fast, building with intent, and learning in a
-          way that sticks — and I’m confident I’ll outpace expectations with the
-          right opportunity. Keep an eye on me — I’m just getting started.
+          I'm transitioning into cloud and DevOps by building a foundation of
+          certifications that actually matter — not just to tick boxes, but to
+          deeply understand the tools and systems I’ll be expected to own. I
+          want to be the person people turn to when things get tough, so I’m
+          going deep where it counts. I'm applying what I learn through real
+          projects, including a full stack solution for a paying client using
+          AWS. Right now I’m focused on Terraform to strengthen my
+          Infrastructure as Code skills. I dipped into Harvard’s CS50 a while
+          back to explore CS fundamentals — before ‘dropping out’ to focus on
+          React and project-based learning. It sparked my interest, but I’ve
+          found that building useful things is where I learn best. I also use AI
+          tools daily to explore concepts faster and test my thinking. I'm
+          hands-on, moving fast, and just getting started.
         </p>
 
         <div class="mt-6 flex gap-2">
@@ -163,13 +167,13 @@
             onclick="openModal('skillsModal')"
             class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition"
           >
-            Learning
+            DevOps Pathway
           </button>
           <button
             onclick="openModal('careerModal')"
             class="bg-cyan-600 text-white px-4 py-2 rounded hover:bg-cyan-700 transition"
           >
-            Career Pathways</button
+            Full Stack Pathway</button
           ><button
             onclick="openModal('projectsModal')"
             class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition"
@@ -189,15 +193,31 @@
           </h2>
 
           <ul class="list-disc ml-4 mt-2 text-sm text-gray-300">
-            <li>SQL Server Administration &amp; Querying</li>
-            <li>Linux CLI, file structure, permissions, and services</li>
-            <li>Data Encryption Concepts: KMS, SSE, TLS</li>
-            <li>REST API Design &amp; Integration</li>
-            <li>HTTP Methods, Status Codes, TTL, Polling Techniques</li>
-            <li>Containers: Concepts, Usage, Benefits</li>
-            <li>Infrastructure as Code (AWS CDK, CloudFormation)</li>
-            <li>Serverless Architecture (Lambda, API Gateway, DynamoDB)</li>
-            <li>Networking: VPC, Subnets, DNS, Port Configuration</li>
+            <li>
+              SQL Server & Querying – basic admin tasks and writing SQL queries
+            </li>
+            <li>
+              Linux CLI & System Navigation – working with file structures,
+              permissions, and services
+            </li>
+            <li>Cloud Security Concepts – KMS, TLS, SSE, IAM roles</li>
+            <li>
+              Working with APIs – consuming REST APIs, using HTTP methods and
+              status codes
+            </li>
+            <li>
+              Containers & Serverless – Docker, Fargate, Lambda, API Gateway,
+              DynamoDB
+            </li>
+
+            <li>Infrastructure as Code (AWS CDK, Terraform, CloudFormation)</li>
+            <li>
+              Cloud Networking Fundamentals – VPCs, subnets, DNS, port config
+            </li>
+            <li>
+              Command-Line Fluency – daily use of Linux CLI, Git, AWS CLI,
+              Docker, Terraform
+            </li>
           </ul>
         </div>
       </div>
@@ -277,15 +297,14 @@
       </div>
     </div>
 
-    <!-- Learning Pathways Modal -->
+    <!-- DevOps Foundation Modal -->
     <div
       id="skillsModal"
       onclick="if(event.target===this) closeModal('skillsModal')"
-      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-start pt-4 sm:pt-8 px-2"
     >
-      <!-- Use a flexible width: full width on small screens and max-width on large ones -->
       <div
-        class="bg-gray-800 p-6 rounded w-11/12 md:w-3/4 lg:max-w-[900px] relative"
+        class="bg-gray-800 p-4 sm:p-6 rounded-lg w-full max-w-[1080px] md:w-[96%] lg:w-[90%] xl:w-[80%] 2xl:max-w-[1180px] relative max-h-[93vh] overflow-y-auto shadow-lg [scrollbar-gutter:stable]"
       >
         <button
           onclick="closeModal('skillsModal')"
@@ -293,250 +312,358 @@
         >
           &times;
         </button>
-
-        <h2 class="text-2xl font-extrabold text-cyan-400 mb-4 text-center">
-          Learning Pathways
+        <h2 class="text-2xl font-extrabold text-cyan-400 mb-2 text-center">
+          DevOps Foundation
         </h2>
-
-        <!-- Container for 3 rows -->
-        <div class="space-y-4">
-          <!-- Row 1 -->
-          <div
-            class="grid grid-cols-[1fr_3fr_1fr] items-start border-b border-purple-600 pb-4"
-          >
-            <!-- Left Column: Image -->
-            <div class="relative flex justify-center items-center">
-              <img
-                src="assets/images/skills-in-progress/LinuxEssentials-IconSize.png"
-                class="w-24"
-                alt="Linux Essentials Icon"
-              />
-              <!-- Completed tick icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                class="absolute top-1 right-1 w-7 h-7 bg-white rounded-full p-0.5 text-green-500 shadow"
-                aria-label="Completed"
-                role="img"
-              >
-                <path
-                  fill="currentColor"
-                  d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm-1 15l-5-5 
-       1.414-1.414L11 14.172l6.586-6.586L19 9z"
+        <!-- Modal Grid Container -->
+        <div class="grid grid-cols-[1.5fr_1px_1fr] gap-6 pt-2">
+          <!-- LEFT COLUMN: Certifications -->
+          <div class="pr-3">
+            <!-- Row 1: Current Certs -->
+            <div>
+              <h3 class="text-lg font-semibold text-white mb-2">
+                Certifications in Progress
+              </h3>
+              <p class="text-sm text-gray-300 leading-relaxed mb-2">
+                Linux Essentials and Python are now completed (exam to sit) —
+                giving me strong command-line fluency, system administration
+                fundamentals, and backend logic. I’ve used AWS SAM and
+                CloudFormation, but I’m now focused on Terraform Associate (003)
+                to build confidence with the industry-standard IaC tool. My goal
+                is to write clean, production-ready Terraform and be able to
+                seamlessly contribute within a DevOps team from day one.
+              </p>
+              <div class="flex justify-center items-center gap-[12px] mt-2">
+                <img
+                  src="assets/images/skills-in-progress/linux-essentials.png"
+                  class="w-24"
                 />
-              </svg>
+                <img
+                  src="assets/images/skills-in-progress/python-associate.png"
+                  class="w-24"
+                />
+
+                <img
+                  src="assets/images/skills-in-progress/terraform003.png"
+                  class="w-24"
+                />
+              </div>
             </div>
-            <!-- Middle Column: Text -->
-            <div class="text-sm text-gray-300 leading-relaxed px-4">
-              Completed Linux Essentials, covering key topics in system
-              administration, networking, and troubleshooting. LPIC-1 remains a
-              longer-term goal for deeper Linux mastery but isn't an immediate
-              priority.
-            </div>
-            <!-- Right Column: Image -->
-            <div class="flex justify-center items-center">
-              <img
-                src="assets/images/skills-in-progress/LPIC-1-IconSize.png"
-                class="w-24"
-                alt="LPIC-1 Icon"
-              />
+
+            <!-- Horizontal divider between cert rows -->
+            <div class="h-px bg-purple-600 my-6"></div>
+
+            <!-- Row 2: Future Certs -->
+            <div>
+              <h3 class="text-lg font-semibold text-white mb-2">
+                Future Certifications
+              </h3>
+              <p class="text-sm text-gray-300 leading-relaxed mb-2">
+                My priority is to secure a DevOps role where I can grow through
+                real-world experience. The certifications I pursue next will
+                align with the technologies used in that role — whether that’s
+                Azure Administrator (AZ-104) or AWS DevOps Engineer –
+                Professional. I’m focused on deepening my automation and CI/CD
+                skills by contributing to practical, team-driven projects.
+              </p>
+              <div class="flex justify-center items-center gap-[12px] mt-2">
+                <img
+                  src="assets/images/skills-in-progress/aws-devops.png"
+                  class="w-24"
+                />
+                <img
+                  src="assets/images/career-pathways/Security.png"
+                  class="w-24"
+                />
+                <!-- insert slash -->
+                <span class="text-cyan-400 text-3xl mx-1">/</span>
+                <img
+                  src="assets/images/skills-in-progress/azure-admin.png"
+                  class="w-24"
+                /><span class="text-cyan-400 text-2xl mx-1">→</span
+                ><img
+                  src="assets/images/skills-in-progress/azure-devops.png"
+                  class="w-24"
+                />
+              </div>
             </div>
           </div>
+          <!-- CLEAN PURPLE DIVIDER COLUMN -->
+          <div class="bg-purple-600 w-px h-full"></div>
+          <!-- RIGHT COLUMN -->
+          <div class="pl-3 flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-semibold text-white mb-2">
+                Terraform + Flask Container Project
+              </h3>
+              <p class="text-sm text-gray-300 leading-relaxed mb-2 text-left">
+                A hands-on DevOps project demonstrating my progress in Python,
+                Docker, and AWS infrastructure. It deploys a simple Flask app to
+                AWS Fargate, fully provisioned with Terraform and continuously
+                delivered using GitHub Actions. Key components include an ECS
+                cluster, Application Load Balancer, IAM, and secure networking —
+                all defined as code. We troubleshot a delayed container start
+                caused by a health check grace period issue, resolved using
+                CloudWatch Logs. PostgreSQL and NGINX are next to extend
+                functionality and improve portability beyond AWS.
+              </p>
 
-          <!-- Row 2 -->
-          <div
-            class="grid grid-cols-[1fr_3fr_1fr] items-start border-b border-purple-600 pb-4"
-          >
-            <div class="relative flex justify-center items-center">
-              <img
-                src="assets/images/skills-in-progress/PythonAssociate.png"
-                class="w-24"
-                alt="Python Associate Icon"
-              /><!-- Completed tick icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                class="absolute top-1 right-1 w-7 h-7 bg-white rounded-full p-0.5 text-green-500 shadow"
-                aria-label="Completed"
-                role="img"
+              <ul class="list-disc list-inside text-sm text-gray-400 mt-2 pl-2">
+                <li>Python/Flask backend</li>
+                <li>AWS Fargate deployment</li>
+                <li>Infrastructure as Code</li>
+                <li>CI/CD pipeline</li>
+              </ul>
+              <a
+                href="https://github.com/Simodalstix/terraform-flask-devops-lab"
+                target="_blank"
+                class="text-cyan-400 text-sm underline hover:text-cyan-300 mt-2"
               >
-                <path
-                  fill="currentColor"
-                  d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm-1 15l-5-5 
-       1.414-1.414L11 14.172l6.586-6.586L19 9z"
+                View on GitHub ↗
+              </a>
+            </div>
+
+            <!-- Centered Icon Grid at Bottom -->
+            <div class="flex justify-center mt-6">
+              <img
+                src="assets/images/career-pathways/terraForm.svg"
+                alt="Terraform"
+                class="w-24 pr-2"
+              />
+              <div class="grid grid-flow-col grid-rows-2 gap-[4px] mt-6">
+                <img
+                  src="assets/images/skills-in-progress/flask-black.svg"
+                  alt="Flask"
+                  class="w-12 bg-white rounded"
                 />
-              </svg>
-            </div>
-            <div class="text-sm text-gray-300 leading-relaxed px-4">
-              Completed my Python certification to build solid backend and
-              automation skills. I wanted structured training to truly
-              understand Python’s core concepts — not just how to use it, but
-              how to use it well. I’m now diving deep into Terraform to
-              strengthen my Infrastructure as Code (IaC) skills and bring
-              repeatable, cloud-native workflows into real projects, with my eye
-              on the Terraform Associate (003) certification as a next
-              milestone.
-            </div>
-            <div class="flex justify-center items-center">
-              <img
-                src="assets/images/skills-in-progress/TerraForm.svg"
-                class="w-24"
-                alt="Terraform Icon"
-              />
-            </div>
-          </div>
+                <img
+                  src="assets/images/skills-in-progress/docker.svg"
+                  alt="Docker"
+                  class="w-12 rounded"
+                />
+                <img
+                  src="assets/images/skills-in-progress/fargate.svg"
+                  alt="Fargate"
+                  class="w-12 rounded"
+                />
 
-          <!-- Row 3 -->
-          <div
-            class="grid grid-cols-[1fr_3fr_1fr] items-start pb-4 border-b border-purple-600"
-          >
-            <!-- Left Column: Flask + Nginx -->
-            <div class="flex justify-center items-center space-x-2">
-              <img
-                src="assets/images/skills-in-progress/flaskSVG.svg"
-                class="w-20"
-                alt="Flask Icon"
-              />
-              <img
-                src="assets/images/skills-in-progress/nginxSVG.svg"
-                class="w-20"
-                alt="Nginx Icon"
-              />
-            </div>
-
-            <!-- Middle Column: Description -->
-            <div class="text-sm text-gray-300 leading-relaxed px-4">
-              I began exploring real-world DevOps fundamentals with Flask,
-              NGINX, and Docker — focusing on deployment workflows and
-              infrastructure-aware apps. While my current focus has shifted to a
-              full stack client project, I still see this area as essential and
-              plan to return to it to deepen my container and service
-              orchestration skills.
-            </div>
-
-            <!-- Right Column: Docker -->
-            <div class="flex justify-center items-center">
-              <img
-                src="assets/images/skills-in-progress/dockerSVG.svg"
-                class="w-24"
-                alt="Docker Icon"
-              />
+                <img
+                  src="assets/images/skills-in-progress/python.svg"
+                  alt="Python"
+                  class="w-12"
+                />
+                <img
+                  src="assets/images/skills-in-progress/cloudwatch.svg"
+                  alt="CloudWatch"
+                  class="w-12 rounded"
+                /><span></span>
+                <div class="w-12 flex items-center justify-center">
+                  <span class="text-cyan-400 text-3xl">→</span>
+                </div>
+                <span></span>
+                <img
+                  src="assets/images/project-icons/nginxSVG.svg"
+                  alt="nginx"
+                  class="w-12"
+                />
+                <img
+                  src="assets/images/career-pathways/postgresqlSVG.svg"
+                  alt="PostgreSQL"
+                  class="w-12 rounded"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Career Pathways Modal -->
+    <!-- Full Stack Developer Modal -->
     <div
       id="careerModal"
       onclick="if(event.target===this) closeModal('careerModal')"
-      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-start pt-4 sm:pt-8 px-2"
     >
-      <div class="bg-gray-800 p-6 rounded w-11/12 md:w-3/4 relative">
+      <div
+        class="bg-gray-800 p-4 sm:p-6 rounded-lg w-full max-w-[1080px] md:w-[96%] lg:w-[90%] xl:w-[80%] 2xl:max-w-[1180px] relative max-h-[93vh] overflow-y-auto shadow-lg [scrollbar-gutter:stable]"
+      >
         <button
           onclick="closeModal('careerModal')"
           class="absolute top-2 right-2 text-xl text-gray-200"
         >
           &times;
         </button>
-
         <h2 class="text-2xl font-extrabold text-cyan-400 mb-4 text-center">
-          Career Pathways
+          Full Stack Developer Pathway
         </h2>
 
-        <div class="flex flex-col md:flex-row gap-6">
-          <!-- DevOps Engineer -->
-          <div class="flex-1 flex flex-col justify-between text-center">
-            <div>
-              <h3 class="text-xl font-semibold mb-2 text-white">
-                DevOps Engineer
-              </h3>
-              <p class="text-sm text-gray-300 leading-relaxed">
-                Learning about automation and modern DevOps practices has been a
-                really pleasant surprise — it’s powerful, efficient, and a huge
-                step up from the manual, legacy systems I was used to. I’d love
-                to be in a role where I can keep building on this knowledge,
-                pursue certifications, and keep improving my ability to design
-                clean, reliable systems.
-              </p>
-            </div>
-            <div class="flex justify-center gap-4 mt-4">
+        <!-- Row 1: Learning Projects -->
+        <div class="grid grid-cols-3 gap-4 border-b border-purple-600 pb-6">
+          <!-- House Market Place -->
+          <div class="pl-4">
+            <p class="text-sm text-gray-300 mt-2">
+              Real estate listing app using React and Firebase. Implements
+              Firebase Auth, Firestore database, CRUD functionality, and cloud
+              storage for image uploads.
+            </p>
+            <a
+              href="https://github.com/Simodalstix/house-market-place"
+              target="_blank"
+              class="text-cyan-400 underline"
+              >Simodalstix/house-market-place</a
+            >
+            <div class="flex flex-wrap gap-1 mt-2 items-center">
               <img
-                src="assets/images/career-pathways/DevopsPro.png"
-                class="w-24"
+                src="assets/images/career-pathways/react-2.svg"
+                alt="React"
+                class="w-12 rounded"
               />
               <img
-                src="assets/images/career-pathways/TerraForm.svg"
-                class="w-24"
-              />
-            </div>
-          </div>
-
-          <div
-            class="border-t md:border-t-0 md:border-l border-purple-600"
-          ></div>
-
-          <!-- Cloud Engineer -->
-          <div class="flex-1 flex flex-col justify-between text-center">
-            <div>
-              <h3 class="text-xl font-semibold mb-2 text-white">
-                Cloud Engineer
-              </h3>
-              <p class="text-sm text-gray-300 leading-relaxed">
-                I just want to be part of this ecosystem — I love how clean and
-                structured everything feels, from the service architecture to
-                concepts like IAM and identity control. It’s technology I
-                genuinely want to use day-to-day. I’m excited to keep building
-                on this knowledge, pursue further certifications, and apply
-                these skills in a real-world cloud engineering role.
-              </p>
-            </div>
-            <div class="flex justify-center gap-4 mt-4">
-              <img
-                src="assets/images/career-pathways/SysOps.png"
-                class="w-24"
+                src="assets/images/career-pathways/firebase.svg"
+                alt="Firebase Auth"
+                class="w-12 rounded"
               />
               <img
-                src="assets/images/career-pathways/Security.png"
-                class="w-24"
+                src="assets/images/career-pathways/firestore.svg"
+                alt="Firestore"
+                class="w-12 rounded"
+              />
+              <img
+                src="assets/images/career-pathways/google-cloud.svg"
+                alt="Cloud Storage"
+                class="w-12 rounded"
               />
             </div>
           </div>
-
-          <div
-            class="border-t md:border-t-0 md:border-l border-purple-600"
-          ></div>
-
-          <!-- Full Stack Developer -->
-          <div class="flex-1 flex flex-col justify-between text-center">
-            <div>
-              <h3 class="text-xl font-semibold mb-2 text-white">
-                Full Stack Developer
-              </h3>
-              <p class="text-sm text-gray-300 leading-relaxed">
-                I want to build full stack projects because it helps me
-                understand how everything fits together. Working across the
-                whole stack makes me better at every part of it — whether that's
-                backend, infrastructure, or cloud. This website is a window into
-                that learning journey — a place for me to build, experiment, and
-                show that I'm always improving and adding new skills.
-              </p>
+          <!-- Support Desk -->
+          <div class="px-4 border-r border-purple-600">
+            <p class="text-sm text-gray-300 mt-2">
+              Ticketing platform with secure login, role-based access, and
+              protected routes. Built using React, Redux Toolkit, Express.js,
+              and JWT authentication.
+            </p>
+            <a
+              href="https://github.com/Simodalstix/support-desk"
+              target="_blank"
+              class="text-cyan-400 underline"
+              >Simodalstix/support-desk</a
+            >
+            <div class="flex flex-wrap gap-1 mt-2 items-center">
+              <img
+                src="assets/images/career-pathways/react-2.svg"
+                alt="React"
+                class="w-12 rounded"
+              />
+              <img
+                src="assets/images/career-pathways/redux.svg"
+                alt="Redux Toolkit"
+                class="w-12 rounded"
+              />
+              <img
+                src="assets/images/career-pathways/expressjs-bgwhite.svg"
+                alt="Express.js"
+                class="w-12 rounded"
+              />
+              <img
+                src="assets/images/career-pathways/jwt-3.svg"
+                alt="JWT"
+                class="w-12 rounded"
+              />
             </div>
-            <div class="flex justify-center gap-4 mt-4">
+          </div>
+          <!-- ReStore -->
+          <div class="pr-4 border-r border-purple-600">
+            <p class="text-sm text-gray-300 mt-2">
+              E-commerce app with a React + Redux frontend and .NET Core API
+              backend. Demonstrates full-stack integration, JWT authentication,
+              shopping cart logic, and Stripe payments.
+            </p>
+            <a
+              href="https://github.com/Simodalstix/ReStore"
+              target="_blank"
+              class="text-cyan-400 underline"
+              >Simodalstix/ReStore</a
+            >
+            <div class="flex flex-wrap gap-1 mt-2 items-center">
               <img
-                src="assets/images/career-pathways/React.png"
-                class="w-16 h-auto object-contain"
+                src="assets/images/career-pathways/react-2.svg"
+                alt="React"
+                class="w-12 rounded"
               />
               <img
-                src="assets/images/career-pathways/Python2Snakes.svg"
-                class="w-16 h-auto object-contain"
+                src="assets/images/career-pathways/redux.svg"
+                alt="Redux"
+                class="w-12 rounded"
+              /><img
+                src="assets/images/career-pathways/net-core.svg"
+                alt=".NET Core"
+                class="w-12 rounded"
               />
               <img
-                src="assets/images/career-pathways/postgresqlSVG.svg"
-                class="w-16 h-auto object-contain"
+                src="assets/images/career-pathways/jwt-3.svg"
+                alt="JWT"
+                class="w-12 rounded"
+              />
+              <img
+                src="assets/images/career-pathways/stripe.svg"
+                alt="Stripe"
+                class="w-12 rounded"
               />
             </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Real Projects and Plans -->
+        <div class="grid grid-cols-2 gap-4 pt-6">
+          <!-- Client Project with Strapi -->
+          <div class="pr-4 border-r border-purple-600">
+            <h4 class="font-semibold text-white mb-2">
+              Strapi + App Runner Project
+            </h4>
+            <p class="text-sm text-gray-300">
+              Full-stack build for a real client using Strapi CMS and PostgreSQL
+              Aurora Serverless. Deployed with App Runner and CI/CD via GitHub
+              Actions. Exploring AWS Amplify and Cognito for secure
+              authentication.
+            </p>
+            <div class="flex flex-wrap gap-1 mt-2 items-center">
+              <img
+                src="assets/images/career-pathways/react-2.svg"
+                alt="React"
+                class="w-12 rounded"
+              /><img
+                src="assets/images/career-pathways/strapi.svg"
+                alt="Strapi"
+                class="w-12 rounded"
+              />
+              <img
+                src="assets/images/career-pathways/apprunner.svg"
+                alt="App Runner"
+                class="w-12 rounded"
+              />
+              <img
+                src="assets/images/career-pathways/aurora.svg"
+                alt="Aurora"
+                class="w-12 rounded"
+              />
+              <img
+                src="assets/images/career-pathways/amplify.svg"
+                alt="Amplify/Cognito"
+                class="w-12 rounded"
+              />
+            </div>
+          </div>
+          <!-- Upcoming Projects -->
+          <div class="pl-4">
+            <h4 class="font-semibold text-white mb-2">Upcoming Projects</h4>
+            <p class="text-sm text-gray-300">
+              Supporting my twin brother’s prototype and helping a friend get
+              early ideas off the ground — including building out starter
+              websites and exploring payment integration. These are still in the
+              idea and prototype stage, but they offer real timelines,
+              collaboration, and deployment challenges that are great for
+              sharpening client-facing skills.
+            </p>
           </div>
         </div>
       </div>
@@ -756,16 +883,17 @@
                 <div class="grid grid-cols-2 gap-2">
                   <div class="w-10 bg-white rounded-md">
                     <img
+                      src="assets/images/project-icons/terraform.svg"
+                      alt="terraform"
+                      class="w-full cursor-pointer rounded-md hover:opacity-80"
+                    />
+                    <img
                       src="assets/images/project-icons/FlaskNoWords.svg"
                       alt="Flask"
                       class="w-full cursor-pointer rounded-md hover:opacity-80"
                     />
                   </div>
                   <img
-                    src="assets/images/project-icons/nginxSVG.svg"
-                    alt="NGINX"
-                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
-                  /><img
                     src="assets/images/project-icons/Python2Snakes.svg"
                     alt="Python"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
@@ -784,14 +912,18 @@
                     src="assets/images/project-icons/dockerSVG.svg"
                     alt="Docker"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                  /><img
+                    src="assets/images/project-icons/nginxSVG.svg"
+                    alt="NGINX"
+                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
                   />
                 </div>
                 <a
-                  href="https://github.com/Simodalstix/flask-postgres-lab"
+                  href="https://github.com/Simodalstix/terraform-flask-devops-lab"
                   target="_blank"
                   class="mt-auto self-end text-cyan-400 hover:underline text-xs"
                 >
-                  In progress
+                  View on GitHub
                 </a>
               </div>
 
@@ -802,14 +934,15 @@
                     Containerized Flask API & PostgreSQL Lab
                   </h3>
                   <p class="mt-4 text-sm text-gray-300">
-                    A planned DevOps project combining everything I’ve been
-                    learning — from Python and containers to cloud deployment.
-                    The goal is to build a Flask backend with PostgreSQL, fully
-                    containerized with Docker, fronted by NGINX, and
-                    orchestrated with Docker Compose. I’ll deploy it to AWS
-                    Fargate using infrastructure as code and CI/CD workflows.
-                    This will be my most complete project yet — a hands-on way
-                    to solidify theory while building something real.
+                    A hands-on DevOps project showcasing my progress in Python,
+                    Docker, and cloud deployment. It features a Flask API
+                    deployed to AWS Fargate, fully provisioned with Terraform.
+                    Key components include an ECS cluster, Application Load
+                    Balancer, and secure networking — all defined as code. This
+                    marks my first full deployment using Terraform Cloud,
+                    covering IAM, ECS, and ECR integration. PostgreSQL and NGINX
+                    are next — to add database support and improve portability
+                    beyond AWS.
                   </p>
                   <ul
                     class="grid grid-cols-2 text-xs text-gray-400 gap-y-1 list-disc list-inside pl-4"
@@ -995,16 +1128,34 @@
           <div
             class="bg-gray-700 p-4 rounded text-base text-gray-300 leading-relaxed"
           >
-            My brother and I are building a real solution for a paying customer
-            — and the core stack is already running smoothly. I’ve set up the
-            cloud infrastructure and database (Aurora Serverless), and we’re
-            using Strapi to streamline the backend. It feels like such a modern
-            and intelligent setup. The next phase is developing the frontend,
-            which I’ll deploy using AWS App Runner with a GitHub Actions
-            pipeline. It’s been incredibly satisfying to see a full stack
-            project come to life — I’m genuinely putting my skills to work,
-            handling the backend and cloud architecture so my brother can focus
-            on the frontend.
+            <p>
+              My brother and I are building a real solution for a paying
+              customer — and the core stack is already running smoothly. I’ve
+              set up the cloud infrastructure and database (Aurora Serverless),
+              and we’re using Strapi to streamline the backend. It feels like
+              such a modern and intelligent setup. The next phase is developing
+              the frontend, which I’ll deploy using AWS App Runner with a GitHub
+              Actions pipeline. It’s been incredibly satisfying to see a full
+              stack project come to life — I’m genuinely putting my skills to
+              work, handling the backend and cloud architecture so my brother
+              can focus on the frontend.
+            </p>
+            <ul
+              class="list-disc list-inside mt-4 space-y-1 text-sm text-gray-400"
+            >
+              <li>
+                Making real architectural decisions based on cost trade-offs and
+                operational friction
+              </li>
+              <li>
+                Gaining hands-on experience with collaborative GitHub workflows,
+                branches, and pull requests
+              </li>
+              <li>
+                Iterating project designs after practical constraints (budget,
+                permissions, scale) surfaced
+              </li>
+            </ul>
           </div>
         </div>
       </div>
