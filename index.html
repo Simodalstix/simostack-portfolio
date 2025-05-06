@@ -235,10 +235,10 @@
           </h2>
           <div class="flex flex-col items-center space-y-4">
             <img
-              src="assets/images/certifications/Cloud_Practitioner.png"
-              alt="Cloud Practitioner"
+              src="assets/images/certifications/python-associate.png"
+              alt="python-associate"
               class="w-36 hover:border-2 hover:border-indigo-500 transition rounded cursor-pointer"
-              onclick="openModal('cloudModal')"
+              onclick="openModal('pythonModal')"
             />
             <img
               src="assets/images/certifications/Solutions_Architect.png"
@@ -325,13 +325,14 @@
                 Certifications in Progress
               </h3>
               <p class="text-sm text-gray-300 leading-relaxed mb-2">
-                Linux Essentials and Python are now completed (exam to sit) —
-                giving me strong command-line fluency, system administration
-                fundamentals, and backend logic. I’ve used AWS SAM and
-                CloudFormation, but I’m now focused on Terraform Associate (003)
-                to build confidence with the industry-standard IaC tool. My goal
-                is to write clean, production-ready Terraform and be able to
-                seamlessly contribute within a DevOps team from day one.
+                Linux Essentials and Python are now both completed — giving me
+                strong command-line fluency, backend logic, and system
+                administration fundamentals. I’ve built and deployed real
+                projects using AWS SAM and CloudFormation, but my current focus
+                is mastering Terraform (003) as the industry-standard IaC tool.
+                I’ve also begun preparing for the Azure Administrator (AZ-104)
+                exam to broaden my cloud proficiency across both AWS and
+                Microsoft platforms.
               </p>
               <div class="flex justify-center items-center gap-[12px] mt-2">
                 <img
@@ -339,7 +340,7 @@
                   class="w-24"
                 />
                 <img
-                  src="assets/images/skills-in-progress/python-associate.png"
+                  src="assets/images/skills-in-progress/azure-admin.png"
                   class="w-24"
                 />
 
@@ -359,12 +360,12 @@
                 Future Certifications
               </h3>
               <p class="text-sm text-gray-300 leading-relaxed mb-2">
-                My priority is to secure a DevOps role where I can grow through
-                real-world experience. The certifications I pursue next will
-                align with the technologies used in that role — whether that’s
-                Azure Administrator (AZ-104) or AWS DevOps Engineer –
-                Professional. I’m focused on deepening my automation and CI/CD
-                skills by contributing to practical, team-driven projects.
+                If given the right environment to learn and grow, I’ll quickly
+                level up and specialize. The path I follow — AWS or Azure — will
+                depend on the tools used by the team I join. I’m prepared to
+                focus on DevOps Engineer – Professional or Security Specialty on
+                AWS, or shift toward Azure Security Engineer (AZ-500) and Azure
+                DevOps Expert (AZ-400) if working in a Microsoft shop.
               </p>
               <div class="flex justify-center items-center gap-[12px] mt-2">
                 <img
@@ -378,10 +379,10 @@
                 <!-- insert slash -->
                 <span class="text-cyan-400 text-3xl mx-1">/</span>
                 <img
-                  src="assets/images/skills-in-progress/azure-admin.png"
+                  src="assets/images/skills-in-progress/azure-security.png"
                   class="w-24"
-                /><span class="text-cyan-400 text-2xl mx-1">→</span
-                ><img
+                />
+                <img
                   src="assets/images/skills-in-progress/azure-devops.png"
                   class="w-24"
                 />
@@ -515,9 +516,9 @@
         </div>
 
         <!-- Row 1 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-2">
           <!-- Support Desk -->
-          <div>
+          <div class="bg-gray-700 p-4 rounded">
             <h4 class="font-semibold text-white mb-1">Support Desk</h4>
             <p class="text-sm text-gray-300">
               Ticketing platform with secure login, protected routes, and
@@ -558,7 +559,7 @@
           </div>
 
           <!-- ReStore -->
-          <div>
+          <div class="bg-gray-700 p-4 rounded">
             <h4 class="font-semibold text-white mb-1">ReStore (Early Stage)</h4>
             <p class="text-sm text-gray-300">
               E-commerce app with a React + Redux frontend and .NET Core API
@@ -607,7 +608,7 @@
         <!-- Row 2 -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <!-- House Market Place -->
-          <div>
+          <div class="bg-gray-700 p-4 rounded">
             <h4 class="font-semibold text-white mb-1">House Market Place</h4>
             <p class="text-sm text-gray-300 mb-4">
               Real estate listing app using React and Firebase. Supports user
@@ -691,7 +692,7 @@
 
         <!-- Footer -->
         <footer
-          class="text-center text-sm text-gray-500 mt-6 pt-4 border-t border-gray-700"
+          class="text-center text-sm text-gray-500 mt-4 pt-4 border-t border-gray-700"
         >
           Currently revisiting and revising concepts from
           <a
@@ -1199,38 +1200,40 @@
 
     <!-- Certification Modals -->
 
-    <!-- Cloud Practitioner Modal -->
+    <!-- Python associate Modal -->
     <div
-      id="cloudModal"
-      onclick="if(event.target===this) closeModal('cloudModal')"
+      id="pythonModal"
+      onclick="if(event.target===this) closeModal('pythonModal')"
       class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
     >
       <div class="bg-gray-800 p-6 rounded w-11/12 md:w-3/4 relative">
         <button
-          onclick="closeModal('cloudModal')"
+          onclick="closeModal('pythonModal')"
           class="absolute top-2 right-2 text-xl text-gray-200"
         >
           &times;
         </button>
         <h2 class="text-xl font-bold border-b-2 border-indigo-500 pb-1 mb-4">
-          AWS Certified Cloud Practitioner
+          PCAP™ – Certified Associate Python Programmer
         </h2>
         <p class="text-sm text-gray-300 mb-2">
-          Issued by Amazon Web Services Training and Certification
+          Open Education and Development Group (OpenEDG)
         </p>
         <p class="text-sm text-gray-300">
-          Earners of this certification have a fundamental understanding of IT
-          services and their uses in the AWS Cloud. They demonstrated cloud
-          fluency and foundational AWS knowledge. Certification holders can
-          identify essential AWS services necessary for setting up AWS-focused
-          projects.
+          Earners of the PCAP – Certified Associate Python Programmer badge
+          demonstrate the ability to accomplish coding tasks related to the
+          basics of programming in the Python language and the fundamental
+          notions and techniques used in object-oriented programming. Becoming
+          PCAP certified ensures that the individual is fully acquainted with
+          all the primary means provided by Python 3 to enable her/him to start
+          her/his own studies, and to open a path to the developer’s career.
           <a
-            href="https://www.credly.com/badges/174cafbb-a6a8-4e96-afad-d2db977761e2"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
             class="text-cyan-400 hover:text-cyan-300 underline block mt-3"
           >
-            → Verify Certification on Credly
+            → Badge not yet delivered, will show soon
           </a>
         </p>
       </div>
