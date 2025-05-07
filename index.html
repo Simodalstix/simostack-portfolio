@@ -395,43 +395,54 @@
           <div class="pl-3 flex flex-col justify-between">
             <div>
               <h3 class="text-lg font-semibold text-white mb-2">
-                Terraform + Flask Container Project
+                Terraform + Flask Container Backend
               </h3>
               <p class="text-sm text-gray-300 leading-relaxed mb-2 text-left">
-                A hands-on DevOps project demonstrating my progress in Python,
-                Docker, and AWS infrastructure. It deploys a simple Flask app to
-                AWS Fargate, fully provisioned with Terraform and continuously
-                delivered using GitHub Actions. Key components include an ECS
-                cluster, Application Load Balancer, IAM, and secure networking —
-                all defined as code. We troubleshot a delayed container start
-                caused by a health check grace period issue, resolved using
-                CloudWatch Logs. PostgreSQL and NGINX are next to extend
-                functionality and improve portability beyond AWS.
+                I built this project to deepen my understanding of containers
+                and modern backend infrastructure, knowing how central they are
+                to scalable, cloud-native applications. It deploys a Flask app
+                to AWS Fargate using Terraform and GitHub Actions. Key elements
+                include ECS, ALB, IAM, and secure VPC networking. We resolved a
+                container delay using CloudWatch Logs.
+              </p>
+              <h3 class="text-lg font-semibold text-white mb-2 mt-4">
+                Terraform + Static Website Frontend
+              </h3>
+              <p class="text-sm text-gray-300 leading-relaxed mb-2 text-left">
+                A lightweight frontend project deploying a secure static site
+                with S3, CloudFront, Route 53, and ACM — fully provisioned via
+                Terraform. It features HTTPS, subdomain routing, and CDN
+                caching, all without running servers. This project complements
+                the backend container deployment by showing how modern
+                infrastructure can deliver both dynamic and static content.
               </p>
 
-              <ul class="list-disc list-inside text-sm text-gray-400 mt-2 pl-2">
-                <li>Python/Flask backend</li>
-                <li>AWS Fargate deployment</li>
-                <li>Infrastructure as Code</li>
-                <li>CI/CD pipeline</li>
-              </ul>
-              <a
-                href="https://github.com/Simodalstix/terraform-flask-devops-lab"
-                target="_blank"
-                class="text-cyan-400 text-sm underline hover:text-cyan-300 mt-2"
-              >
-                View on GitHub ↗
-              </a>
+              <div class="flex gap-4 mt-2">
+                <a
+                  href="https://github.com/Simodalstix/terraform-flask-devops-lab"
+                  target="_blank"
+                  class="text-cyan-400 text-sm underline hover:text-cyan-300"
+                >
+                  Flask Fargate Backend ↗
+                </a>
+                <a
+                  href="https://github.com/Simodalstix/terraform-static-website"
+                  target="_blank"
+                  class="text-cyan-400 text-sm underline hover:text-cyan-300"
+                >
+                  Static Website Frontend ↗
+                </a>
+              </div>
             </div>
 
             <!-- Centered Icon Grid at Bottom -->
-            <div class="flex justify-center mt-6">
+            <div class="flex justify-center mt-3">
               <img
                 src="assets/images/career-pathways/terraform.svg"
                 alt="Terraform"
                 class="w-24 pr-2"
               />
-              <div class="grid grid-flow-col grid-rows-2 gap-[4px] mt-6">
+              <div class="grid grid-flow-col grid-rows-2 gap-[4px] mt-3">
                 <img
                   src="assets/images/skills-in-progress/flask-black.svg"
                   alt="Flask"
@@ -451,25 +462,32 @@
                 <img
                   src="assets/images/skills-in-progress/python.svg"
                   alt="Python"
-                  class="w-12"
+                  class="w-12 rounded"
                 />
                 <img
                   src="assets/images/skills-in-progress/cloudwatch.svg"
                   alt="CloudWatch"
                   class="w-12 rounded"
-                /><span></span>
-                <div class="w-12 flex items-center justify-center">
-                  <span class="text-cyan-400 text-3xl">→</span>
-                </div>
-                <span></span>
-                <img
-                  src="assets/images/project-icons/nginxSVG.svg"
-                  alt="nginx"
-                  class="w-12"
                 />
+                <div class="w-12 h-12 rounded opacity-0"></div>
+                <div class="w-12 h-12 rounded opacity-0"></div>
+                <div class="w-12 h-12 rounded opacity-0"></div>
+
                 <img
-                  src="assets/images/career-pathways/postgresqlSVG.svg"
-                  alt="PostgreSQL"
+                  src="assets/images/project-icons/ACM.svg"
+                  alt="ACM"
+                  class="w-12 rounded"
+                /><img
+                  src="assets/images/project-icons/S3.svg"
+                  alt="ACM"
+                  class="w-12 rounded"
+                /><img
+                  src="assets/images/project-icons/CloudFront.svg"
+                  alt="ACM"
+                  class="w-12 rounded"
+                /><img
+                  src="assets/images/project-icons/Route53.svg"
+                  alt="ACM"
                   class="w-12 rounded"
                 />
               </div>
