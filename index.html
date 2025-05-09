@@ -849,8 +849,8 @@
               <div class="flex flex-col h-full">
                 <div class="grid grid-cols-2 gap-2">
                   <img
-                    src="assets/images/project-icons/CloudFormation.svg"
-                    alt="CloudFormation"
+                    src="assets/images/career-pathways/terraform.svg"
+                    alt="Terraform"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
                   />
                   <img
@@ -859,33 +859,27 @@
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
                   />
                   <img
-                    src="assets/images/project-icons/ACM.svg"
-                    alt="ACM"
-                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
-                  />
-                  <img
                     src="assets/images/project-icons/RDS.svg"
                     alt="RDS"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
-                  />
-                  <img
-                    src="assets/images/project-icons/mSQLserver2.svg.svg"
-                    alt="SQL Server"
+                  /><img
+                    src="assets/images/project-icons/ec2.svg"
+                    alt="EC2"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
                   />
                   <img
-                    src="assets/images/project-icons/ClientVPN.svg"
+                    src="assets/images/project-icons/postgresqlSVG.svg"
+                    alt="postgresqlSVG"
+                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                  />
+                  <img
+                    src="assets/images/project-icons/secretsmanager.svg"
                     alt="ClientVPN"
-                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
-                  />
-                  <img
-                    src="assets/images/project-icons/DMS.svg"
-                    alt="DMS"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
                   />
                 </div>
                 <a
-                  href="https://github.com/Simodalstix/aws-vpc-rds-migration"
+                  href="https://github.com/Simodalstix/terraform-postgres-rds-migration"
                   target="_blank"
                   class="mt-auto self-end text-cyan-400 hover:underline text-xs"
                 >
@@ -896,27 +890,25 @@
               <!-- RIGHT COLUMN: Description + bullets -->
               <div class="flex flex-col">
                 <div class="space-y-2">
-                  <h3 class="text-white text-md text-center font-semibold">
-                    SQL Server Migration to AWS RDS
-                  </h3>
+                  <h3>Terraform + PostgreSQL Migration to AWS RDS</h3>
                   <p class="mt-4 text-sm text-gray-300">
-                    Designed a secure and scalable architecture to migrate a
-                    local SQL Server Express environment to the cloud using AWS
-                    best practices. Deployed a VPC with isolated subnets and NAT
-                    Gateway, set up secure VPN access with Easy-RSA
-                    certificates, and configured DMS for low-downtime data
-                    replication. This project encountered many challenges making
-                    me stronger.
+                    Provisioned a secure, production-ready AWS environment using
+                    Terraform to migrate a local PostgreSQL database into Amazon
+                    RDS. The setup included a VPC with public and private
+                    subnets, Bastion host with SSM access, and Secrets Manager
+                    for credential management. Migrated data securely via S3 and
+                    validated integrity using psql, simulating a real-world
+                    cloud transition with no VPN or direct SSH exposure.
                   </p>
                   <ul
                     class="grid grid-cols-2 text-xs text-gray-400 gap-y-1 list-disc list-inside pl-4"
                   >
-                    <li>SQL Server Express</li>
-                    <li>AWS RDS (SQL)</li>
-                    <li>Client VPN with certificates</li>
-                    <li>CloudFormation IaC</li>
+                    <li>PostgreSQL (local to RDS)</li>
+                    <li>Terraform IaC</li>
+                    <li>SSM Session Manager</li>
+                    <li>AWS Secrets Manager</li>
                     <li>VPC, Subnets, NAT Gateway</li>
-                    <li>DMS migration + endpoints</li>
+                    <li>S3 and Bastion for data staging</li>
                   </ul>
                 </div>
               </div>
@@ -931,23 +923,14 @@
               <!-- LEFT COLUMN: 2-wide icon grid -->
               <div class="flex flex-col h-full">
                 <div class="grid grid-cols-2 gap-2">
-                  <div class="w-10 bg-white rounded-md">
+                  <div class="w-10 rounded-md">
                     <img
-                      src="assets/images/project-icons/terraform.svg"
+                      src="assets/images/career-pathways/terraform.svg"
                       alt="terraform"
-                      class="w-full cursor-pointer rounded-md hover:opacity-80"
-                    />
-                    <img
-                      src="assets/images/project-icons/FlaskNoWords.svg"
-                      alt="Flask"
-                      class="w-full cursor-pointer rounded-md hover:opacity-80"
+                      class="w-10 cursor-pointer rounded-md hover:opacity-80"
                     />
                   </div>
                   <img
-                    src="assets/images/project-icons/Python2Snakes.svg"
-                    alt="Python"
-                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
-                  /><img
                     src="assets/images/project-icons/postgresqlSVG.svg"
                     alt="PostgreSQL"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
@@ -965,6 +948,14 @@
                   /><img
                     src="assets/images/project-icons/nginxSVG.svg"
                     alt="NGINX"
+                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                  /><img
+                    src="assets/images/project-icons/Python2Snakes.svg"
+                    alt="Python"
+                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                  /><img
+                    src="assets/images/project-icons/FlaskNoWords.svg"
+                    alt="Flask"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
                   />
                 </div>
@@ -984,22 +975,20 @@
                     Containerized Flask API & PostgreSQL Lab
                   </h3>
                   <p class="mt-4 text-sm text-gray-300">
-                    A hands-on DevOps project showcasing my progress in Python,
-                    Docker, and cloud deployment. It features a Flask API
-                    deployed to AWS Fargate, fully provisioned with Terraform.
-                    Key components include an ECS cluster, Application Load
-                    Balancer, and secure networking — all defined as code. This
-                    marks my first full deployment using Terraform Cloud,
-                    covering IAM, ECS, and ECR integration. PostgreSQL and NGINX
-                    are next — to add database support and improve portability
-                    beyond AWS.
+                    I created this project to strengthen my grasp of
+                    containerized backend architecture and the foundations of
+                    scalable, cloud-native systems. The deployment uses
+                    Terraform and GitHub Actions to provision a Flask API on AWS
+                    Fargate. It incorporates essential components like ECS, an
+                    Application Load Balancer, IAM permissions, and private
+                    networking within a VPC.
                   </p>
                   <ul
                     class="grid grid-cols-2 text-xs text-gray-400 gap-y-1 list-disc list-inside pl-4"
                   >
                     <li>Python backend</li>
                     <li>Dockerized architecture</li>
-                    <li>NGINX reverse proxy</li>
+
                     <li>AWS Fargate deployment</li>
                     <li>Infrastructure as Code</li>
                     <li>CI/CD pipeline</li>
