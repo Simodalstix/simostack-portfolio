@@ -165,7 +165,7 @@
             onclick="openModal('skillsModal')"
             class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition"
           >
-            DevOps Pathway
+            DevOps &amp; Infrastructure
           </button>
           <button
             onclick="openModal('careerModal')"
@@ -177,12 +177,6 @@
             class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition"
           >
             Projects
-          </button>
-          <button
-            onclick="openModal('collabModal')"
-            class="bg-cyan-600 text-white px-4 py-2 rounded hover:bg-cyan-700 transition"
-          >
-            Collaboration
           </button>
         </div>
         <div class="mt-6 bg-gray-700 p-4 rounded relative">
@@ -355,12 +349,15 @@
                 Future Certifications
               </h3>
               <p class="text-sm text-gray-300 leading-relaxed mb-2">
-                I plan to pursue the AWS DevOps Engineer – Professional
-                certification to validate advanced automation, CI/CD, and
-                infrastructure delivery skills. I’m also interested in RHCE and
-                container-focused Red Hat certifications for deeper enterprise
-                DevOps capability. If working in a Microsoft environment, I’ll
-                pivot toward AZ-400 or AZ-500.
+                I'm aiming to land a junior cloud or DevOps role where I can
+                keep building real-world experience. Once I'm in an AWS-focused
+                environment, I'd like to pursue the AWS DevOps Engineer –
+                Professional certification to grow deeper in automation and
+                infrastructure delivery. I've also been enjoying Google Cloud
+                lately, and their hands-on Associate Cloud Engineer cert is
+                something I plan to complete to strengthen my multi-cloud
+                foundation. If I end up working in a Microsoft-heavy stack, I'd
+                consider AZ-400 or AZ-500.
               </p>
               <div class="flex justify-center items-center gap-[12px] mt-2">
                 <img
@@ -378,7 +375,7 @@
                   class="w-24"
                 />
                 <img
-                  src="assets/images/skills-in-progress/azure-devops.png"
+                  src="assets/images/skills-in-progress/ace.png"
                   class="w-24"
                 />
               </div>
@@ -726,7 +723,7 @@
       class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
     >
       <div
-        class="bg-gray-800 p-6 rounded w-11/12 md:w-3/4 relative text-gray-200 max-h-[90vh] overflow-y-auto"
+        class="bg-gray-800 p-3 rounded w-full md:w-[88%] h-[92vh] max-h-screen overflow-y-auto text-gray-200 relative"
       >
         <button
           onclick="closeModal('projectsModal')"
@@ -734,8 +731,8 @@
         >
           &times;
         </button>
-        <h2 class="text-2xl font-extrabold text-cyan-400 mb-4 text-center">
-          Projects
+        <h2 class="text-2xl font-extrabold text-cyan-400 mb-2 text-center">
+          Recent Projects
         </h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -748,55 +745,50 @@
               <div class="flex flex-col h-full">
                 <div class="grid grid-cols-2 gap-2 place-items-center">
                   <img
-                    src="assets/images/project-icons/S3.svg"
-                    alt="S3"
+                    src="assets/images/career-pathways/terraform.svg"
+                    alt="Terraform"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
                   />
                   <img
-                    src="assets/images/project-icons/CloudFront.svg"
-                    alt="CloudFront"
+                    src="assets/images/project-icons/google-cloud.svg"
+                    alt="Google"
+                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                  /><img
+                    src="assets/images/project-icons/gcp/compute_engine.svg"
+                    alt="compute engine"
+                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                  /><img
+                    src="assets/images/project-icons/gcp/secret_manager.svg"
+                    alt="Secrets Manager"
+                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                  /><img
+                    src="assets/images/project-icons/gcp/artifact_registry.svg"
+                    alt="artifact registry"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
                   />
+
                   <img
-                    src="assets/images/project-icons/Route53.svg"
-                    alt="Route53"
+                    src="assets/images/project-icons/dockerSVG.svg"
+                    alt="Docker"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
                   />
+
                   <img
-                    src="assets/images/project-icons/ACM.svg"
-                    alt="ACM"
+                    src="assets/images/project-icons/mongodb-icon.svg"
+                    alt="MongoDB"
+                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                  /><img
+                    src="assets/images/project-icons/github-actions.svg"
+                    alt="github actions"
+                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                  /><img
+                    src="assets/images/project-icons/cloudflare-svgrepo-com.svg"
+                    alt="Cloudflare"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
                   />
-                  <img
-                    src="assets/images/project-icons/APIGateway.svg"
-                    alt="API Gateway"
-                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
-                  />
-                  <img
-                    src="assets/images/project-icons/Lambda.svg"
-                    alt="Lambda"
-                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
-                  />
-                  <img
-                    src="assets/images/project-icons/DynamoDB.svg"
-                    alt="DynamoDB"
-                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
-                  />
-                  <div class="relative w-10 h-10 bg-white rounded-md">
-                    <img
-                      src="assets/images/project-icons/ReactBlack.svg"
-                      alt="React Icon"
-                      class="w-full h-full object-contain rounded-md border-2 border-green-400"
-                    />
-                    <span
-                      class="absolute -bottom-4 left-1/2 -translate-x-1/2 text-[10px] text-green-400 font-semibold"
-                    >
-                      Soon
-                    </span>
-                  </div>
                 </div>
                 <a
-                  href="https://github.com/Simodalstix/simostack-portfolio"
+                  href="https://github.com/Simodalstix/storybooks"
                   target="_blank"
                   class="mt-auto self-end text-cyan-400 hover:underline text-xs"
                 >
@@ -806,35 +798,27 @@
 
               <!-- RIGHT COLUMN: Description + badges + GitHub -->
               <div class="flex flex-col">
-                <div class="space-y-2">
+                <div class="space-y-3">
                   <h3 class="text-white text-base text-center font-semibold">
-                    Portfolio Website (This Site)
+                    Devops Google-Cloud Atlas MongoDB
                   </h3>
-                  <p class="mt-4 text-sm text-gray-300">
-                    Built with S3, CloudFront, and Route 53 to host static HTML
-                    and images, and continuously evolving with new features and
-                    architecture as I learn. More than a static site, it
-                    reflects my real-world journey through AWS, infrastructure,
-                    DevOps, and full-stack development.
+                  <p class="space-y-3 text-sm text-gray-300">
+                    Storybooks began as a fork of a finished app, which I used
+                    to follow along with a DevOps expert while we transformed it
+                    into a fully infrastructure-as-code project. We started by
+                    running the app locally in Docker Compose, then provisioned
+                    all cloud resources using Terraform — including subdomains
+                    via Cloudflare and a production-ready MongoDB Atlas cluster
+                    on GCP.
                   </p>
-                  <ul
-                    class="grid grid-cols-1 text-xs text-gray-400 gap-y-1 list-disc list-inside pl-4"
-                  >
-                    <li>
-                      <strong>CI/CD with GitHub Actions</strong> — Automated
-                      deployment pipeline keeps updates fast and
-                      production-ready.
-                    </li>
-                    <li>
-                      <strong>Planned React Rebuild</strong> — A future upgrade
-                      to improve interactivity and component structure.
-                    </li>
-                    <li>
-                      <strong>Considering a Blog</strong> — I may add a space to
-                      share what I’m learning, building, and exploring — across
-                      multiple tech paths.
-                    </li>
-                  </ul>
+
+                  <p class="text-sm text-gray-300">
+                    The project uses a custom Makefile to manage environments,
+                    making it easy to switch between staging and production. It
+                    also includes GitHub Actions for automated deployment,
+                    giving me real experience with modern CI/CD and
+                    multi-environment workflows.
+                  </p>
                 </div>
               </div>
             </div>
@@ -851,6 +835,10 @@
                   <img
                     src="assets/images/career-pathways/terraform.svg"
                     alt="Terraform"
+                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                  /><img
+                    src="assets/images/project-icons/aws-icon.svg"
+                    alt="AWS Icon"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
                   />
                   <img
@@ -889,27 +877,29 @@
 
               <!-- RIGHT COLUMN: Description + bullets -->
               <div class="flex flex-col">
-                <div class="space-y-2">
-                  <h3>Terraform + PostgreSQL Migration to AWS RDS</h3>
-                  <p class="mt-4 text-sm text-gray-300">
-                    Provisioned a secure, production-ready AWS environment using
-                    Terraform to migrate a local PostgreSQL database into Amazon
-                    RDS. The setup included a VPC with public and private
-                    subnets, Bastion host with SSM access, and Secrets Manager
-                    for credential management. Migrated data securely via S3 and
-                    validated integrity using psql, simulating a real-world
-                    cloud transition with no VPN or direct SSH exposure.
-                  </p>
-                  <ul
-                    class="grid grid-cols-2 text-xs text-gray-400 gap-y-1 list-disc list-inside pl-4"
-                  >
-                    <li>PostgreSQL (local to RDS)</li>
-                    <li>Terraform IaC</li>
-                    <li>SSM Session Manager</li>
-                    <li>AWS Secrets Manager</li>
-                    <li>VPC, Subnets, NAT Gateway</li>
-                    <li>S3 and Bastion for data staging</li>
-                  </ul>
+                <div class="space-y-3">
+                  <h3 class="text-white text-base text-center font-semibold">
+                    Database Migration PostgresSQL to Amazon RDS
+                  </h3>
+                  <div class="space-y-3 text-sm text-gray-300">
+                    <p>
+                      This project focused on a realistic migration scenario:
+                      taking a local PostgreSQL database and moving it to the
+                      cloud using AWS RDS. I designed the architecture with
+                      Terraform, including a VPC with public and private
+                      subnets, a Bastion host accessed via SSM Session Manager,
+                      and Secrets Manager for secure credential handling —
+                      avoiding any exposed ports or direct SSH.
+                    </p>
+                    <p>
+                      The database was staged through S3 and restored using
+                      psql, closely mimicking how a secure cloud transition
+                      might be handled in production. It gave me practical
+                      insight into infrastructure planning, data transfer, and
+                      how to combine security best practices with
+                      infrastructure-as-code.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -923,13 +913,16 @@
               <!-- LEFT COLUMN: 2-wide icon grid -->
               <div class="flex flex-col h-full">
                 <div class="grid grid-cols-2 gap-2">
-                  <div class="w-10 rounded-md">
-                    <img
-                      src="assets/images/career-pathways/terraform.svg"
-                      alt="terraform"
-                      class="w-10 cursor-pointer rounded-md hover:opacity-80"
-                    />
-                  </div>
+                  <img
+                    src="assets/images/career-pathways/terraform.svg"
+                    alt="terraform"
+                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                  /><img
+                    src="assets/images/project-icons/aws-icon.svg"
+                    alt="AWS Icon"
+                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                  />
+
                   <img
                     src="assets/images/project-icons/postgresqlSVG.svg"
                     alt="PostgreSQL"
@@ -954,8 +947,8 @@
                     alt="Python"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
                   /><img
-                    src="assets/images/project-icons/FlaskNoWords.svg"
-                    alt="Flask"
+                    src="assets/images/project-icons/github-actions.svg"
+                    alt="github actions"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
                   />
                 </div>
@@ -970,29 +963,26 @@
 
               <!-- RIGHT COLUMN: description + bullets + GitHub -->
               <div class="flex flex-col">
-                <div class="space-y-2">
+                <div class="space-y-3">
                   <h3 class="text-white text-md text-center font-semibold">
                     Containerized Flask API & PostgreSQL Lab
                   </h3>
-                  <p class="mt-4 text-sm text-gray-300">
-                    I created this project to strengthen my grasp of
-                    containerized backend architecture and the foundations of
-                    scalable, cloud-native systems. The deployment uses
-                    Terraform and GitHub Actions to provision a Flask API on AWS
-                    Fargate. It incorporates essential components like ECS, an
-                    Application Load Balancer, IAM permissions, and private
-                    networking within a VPC.
-                  </p>
-                  <ul
-                    class="grid grid-cols-2 text-xs text-gray-400 gap-y-1 list-disc list-inside pl-4"
-                  >
-                    <li>Python backend</li>
-                    <li>Dockerized architecture</li>
-
-                    <li>AWS Fargate deployment</li>
-                    <li>Infrastructure as Code</li>
-                    <li>CI/CD pipeline</li>
-                  </ul>
+                  <div class="space-y-3 text-sm text-gray-300">
+                    <p>
+                      I created this project to strengthen my grasp of backend
+                      architecture and container-based infrastructure. After
+                      getting a Flask API running locally, I used Terraform and
+                      GitHub Actions to deploy it to AWS Fargate with a secure
+                      VPC, IAM permissions, and an Application Load Balancer.
+                    </p>
+                    <p>
+                      The goal was to simulate a real cloud-native environment
+                      using Docker, ECS, and infrastructure-as-code. It gave me
+                      practical experience with private networking, modular
+                      Terraform design, and CI/CD workflows — tying together
+                      backend logic with modern deployment practices.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1007,39 +997,39 @@
               <div class="flex flex-col h-full">
                 <div class="grid grid-cols-2 gap-2">
                   <img
-                    src="assets/images/project-icons/CloudFormation.svg"
-                    alt="CloudFormation"
+                    src="assets/images/project-icons/nodejs.svg"
+                    alt="Node.js"
+                    class="w-10 cursor-pointer rounded-md hover:opacity-80"
+                  /><img
+                    src="assets/images/project-icons/express.svg"
+                    alt="Express"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
                   />
                   <img
-                    src="assets/images/project-icons/APIGateway.svg"
-                    alt="API Gateway"
+                    src="assets/images/project-icons/dockerSVG.svg"
+                    alt="Docker"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
                   />
                   <img
-                    src="assets/images/project-icons/Lambda.svg"
-                    alt="Lambda"
+                    src="assets/images/project-icons/nginxSVG.svg"
+                    alt="NGINX"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
-                  />
-                  <img
-                    src="assets/images/project-icons/DynamoDB.svg"
-                    alt="DynamoDB"
+                  /><img
+                    src="assets/images/project-icons/raspberry-pi.svg"
+                    alt="raspberry-pi"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
-                  />
-                  <img
-                    src="assets/images/project-icons/Python2Snakes.svg"
-                    alt="Python"
+                  /><img
+                    src="assets/images/project-icons/github-actions.svg"
+                    alt="Github Actions"
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
-                  />
-
-                  <img
-                    src="assets/images/project-icons/linux-tux-1.svg"
-                    alt="CLI Tool"
+                  /><img
+                    src="assets/images/project-icons/postgresqlSVG.svg"
+                    alt="PostgreSQL "
                     class="w-10 cursor-pointer rounded-md hover:opacity-80"
                   />
                 </div>
                 <a
-                  href="https://github.com/Simodalstix/visitor-api"
+                  href="https://github.com/Simodalstix/raspberry-pi-backend"
                   target="_blank"
                   class="mt-auto self-end text-cyan-400 hover:underline text-xs"
                 >
@@ -1051,33 +1041,26 @@
               <div class="flex flex-col">
                 <div class="space-y-2">
                   <h3 class="text-white text-md text-center font-semibold">
-                    Visitor Tracker with API + CLI Log Viewer
+                    Raspberry Pi Backend with CI/CD & NGINX Proxy
                   </h3>
-                  <p class="mt-4 text-sm text-gray-300">
-                    A lightweight, serverless analytics project powered by AWS
-                    and Python. Visitors to my site trigger an API Gateway
-                    endpoint that runs a Lambda function to log IP, timestamp,
-                    and User-Agent data into DynamoDB. I built a local CLI tool
-                    to query and explore the logs, and used AWS SAM to handle
-                    deployment and permissions.
-                  </p>
-                  <ul
-                    class="text-xs text-gray-400 space-y-1 pl-4 list-disc list-inside mt-2"
-                  >
-                    <li>
-                      <strong>True Serverless Architecture</strong> — Lambda +
-                      DynamoDB for backend and storage
-                    </li>
-                    <li>
-                      <strong>Log Explorer Script (CLI)</strong>
-                      Python + <code>boto3</code> script, CLI design, practical
-                      data querying
-                    </li>
-                    <li>
-                      <strong>AWS SAM Deployment</strong> — infrastructure as
-                      code and permissions management.
-                    </li>
-                  </ul>
+                  <div class="space-y-3 text-sm text-gray-300">
+                    <p>
+                      This project explores a cost-effective backend deployment
+                      using a Raspberry Pi. I containerized a Node.js +
+                      PostgreSQL API with Docker Compose and used GitHub Actions
+                      to auto-deploy on push via SSH. To expose the API
+                      securely, I configured NGINX Proxy Manager in Docker,
+                      routing traffic from a custom subdomain
+                      (api.simostack.com) via DuckDNS with SSL from Let’s
+                      Encrypt.
+                    </p>
+                    <p>
+                      Persistent volumes handle data durability. The result is a
+                      cloud-style deployment — self-hosted for zero cost — and a
+                      great way to build practical skills in Docker, CI/CD, and
+                      network routing.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
