@@ -144,7 +144,7 @@
       <!-- Middle Column: Main Intro, Buttons, and Skills List -->
       <div class="bg-gray-800 p-6 rounded shadow space-y-6">
         <h1 class="text-2xl font-bold border-b-2 border-indigo-500 pb-1">
-          Ambition &amp; Career Pathway
+          Junior DevOps &amp; Cloud Engineer
         </h1>
         <p class="mt-4 text-sm text-gray-300">
           I hit a skill ceiling too early in pharmacy, and I knew I needed a
@@ -162,21 +162,26 @@
 
         <div class="mt-6 flex gap-2">
           <button
-            onclick="openModal('skillsModal')"
+            onclick="openModal('focusModal')"
             class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition"
           >
-            DevOps &amp; Infrastructure
-          </button>
-          <button
-            onclick="openModal('careerModal')"
-            class="bg-cyan-600 text-white px-4 py-2 rounded hover:bg-cyan-700 transition"
-          >
-            Full Stack Pathway</button
+            Learning Focus</button
           ><button
             onclick="openModal('projectsModal')"
-            class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition"
+            class="bg-cyan-600 text-white px-4 py-2 rounded hover:bg-cyan-700 transition"
           >
             Projects
+          </button>
+          <button
+            onclick="openModal('k8sModal')"
+            class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition"
+          >
+            Kubernetes Journey</button
+          ><button
+            onclick="checkPiConnection()"
+            class="bg-cyan-600 text-white px-4 py-2 rounded hover:bg-cyan-700 transition"
+          >
+            Raspblog
           </button>
         </div>
         <div class="mt-6 bg-gray-700 p-4 rounded relative">
@@ -291,428 +296,296 @@
 
     <!-- DevOps Foundation Modal -->
     <div
-      id="skillsModal"
-      onclick="if(event.target===this) closeModal('skillsModal')"
+      id="focusModal"
+      onclick="if(event.target===this) closeModal('focusModal')"
       class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-start pt-4 sm:pt-8 px-2"
     >
       <div
-        class="bg-gray-800 p-4 sm:p-6 rounded-lg w-full max-w-[1080px] md:w-[96%] lg:w-[90%] xl:w-[80%] 2xl:max-w-[1180px] relative max-h-[93vh] overflow-y-auto shadow-lg [scrollbar-gutter:stable]"
+        class="bg-gray-800 p-6 rounded-lg w-full max-w-[1280px] md:w-[96%] xl:w-[92%] 2xl:w-[1280px] relative max-h-[93vh] overflow-y-auto shadow-lg [scrollbar-gutter:stable]"
       >
         <button
-          onclick="closeModal('skillsModal')"
+          onclick="closeModal('focusModal')"
           class="absolute top-2 right-2 text-xl text-gray-200"
         >
           &times;
         </button>
-        <h2 class="text-2xl font-extrabold text-cyan-400 mb-2 text-center">
-          DevOps Foundation
+
+        <h2 class="text-2xl font-extrabold text-cyan-400 mb-4 text-center">
+          Learning Focus
         </h2>
-        <!-- Modal Grid Container -->
-        <div class="grid grid-cols-[1.5fr_1px_1fr] gap-6 pt-2">
-          <!-- LEFT COLUMN: Certifications -->
-          <div class="pr-3">
-            <!-- Row 1: Current Certs -->
+
+        <!-- Unified 2x3 Layout -->
+        <div class="grid grid-cols-3 divide-x divide-purple-600 gap-6">
+          <!-- Column 1 -->
+          <div
+            class="flex flex-col items-center text-center justify-between space-y-4 px-2"
+          >
             <div>
               <h3 class="text-lg font-semibold text-white mb-2">
                 Certifications in Progress
               </h3>
-              <p class="text-sm text-gray-300 leading-relaxed mb-2">
-                Python is complete, and I’m now focused on mastering Terraform
-                (003) as my primary infrastructure-as-code tool while actively
-                beginning RHCSA study to deepen my practical Linux skills —
-                including SELinux, systemd, firewalld, and LVM. I’ve also
-                started exploring Azure through hands-on platform use and
-                account setup, gradually building familiarity with its services
-                and preparing to study for AZ-104 if needed in a future role.
-              </p>
-              <div class="flex justify-center items-center gap-[12px] mt-2">
-                <img
-                  src="assets/images/skills-in-progress/rhcsa.png"
-                  class="w-24"
-                /><img
-                  src="assets/images/skills-in-progress/terraform003.png"
-                  class="w-24"
-                />
-                <img
-                  src="assets/images/skills-in-progress/azure-admin.png"
-                  class="w-24"
-                />
+              <div class="text-sm text-gray-300 space-y-3 leading-relaxed">
+                <p>
+                  Currently focused on Terraform and RHCSA as my primary study
+                  goals. I've been living inside the Terraform docs and
+                  tutorials, wiring it into project after project — and I’m
+                  finally ready to sit the exam within the next week. Alongside
+                  that, I’m steadily progressing through the RHCSA course by
+                  Sander van Vugt to sharpen my practical Linux skills. Loving
+                  it. Genuinely.
+                </p>
+                <p>
+                  Once these are done, I'm eyeing the Google Cloud Associate
+                  Engineer certification next — it's a practical,
+                  well-structured cert with great value in terms of both cost
+                  and duration. A smart next step for real-world cloud fluency.
+                </p>
               </div>
             </div>
-
-            <!-- Horizontal divider between cert rows -->
-            <div class="h-px bg-purple-600 my-6"></div>
-
-            <!-- Row 2: Future Certs -->
-            <div>
-              <h3 class="text-lg font-semibold text-white mb-2">
-                Future Certifications
-              </h3>
-              <p class="text-sm text-gray-300 leading-relaxed mb-2">
-                I'm aiming to land a junior cloud or DevOps role where I can
-                keep building real-world experience. Once I'm in an AWS-focused
-                environment, I'd like to pursue the AWS DevOps Engineer –
-                Professional certification to grow deeper in automation and
-                infrastructure delivery. I've also been enjoying Google Cloud
-                lately, and their hands-on Associate Cloud Engineer cert is
-                something I plan to complete to strengthen my multi-cloud
-                foundation. If I end up working in a Microsoft-heavy stack, I'd
-                consider AZ-400 or AZ-500.
-              </p>
-              <div class="flex justify-center items-center gap-[12px] mt-2">
-                <img
-                  src="assets/images/skills-in-progress/aws-devops.png"
-                  class="w-24"
-                />
-                <img
-                  src="assets/images/career-pathways/Security.png"
-                  class="w-24"
-                />
-                <!-- insert slash -->
-                <span class="text-cyan-400 text-3xl mx-1">/</span>
-                <img
-                  src="assets/images/skills-in-progress/azure-security.png"
-                  class="w-24"
-                />
-                <img
-                  src="assets/images/skills-in-progress/ace.png"
-                  class="w-24"
-                />
-              </div>
+            <div class="flex justify-center gap-3">
+              <img
+                src="assets/images/skills-in-progress/terraform003.png"
+                class="h-28 object-contain hover:scale-105 hover:opacity-90 transition duration-50"
+              />
+              <img
+                src="assets/images/skills-in-progress/rhcsa.png"
+                class="h-28 object-contain hover:scale-105 hover:opacity-90 transition duration-50"
+              />
+              <img
+                src="assets/images/skills-in-progress/azure-admin.png"
+                class="h-28 object-contain hover:scale-105 hover:opacity-90 transition duration-50"
+              />
             </div>
           </div>
-          <!-- CLEAN PURPLE DIVIDER COLUMN -->
-          <div class="bg-purple-600 w-px h-full"></div>
-          <!-- RIGHT COLUMN -->
-          <div class="pl-3 flex flex-col justify-between">
+
+          <!-- Column 2 -->
+          <div
+            class="flex flex-col items-center text-center justify-between space-y-4 px-2"
+          >
             <div>
               <h3 class="text-lg font-semibold text-white mb-2">
-                Terraform + Flask Container Backend
+                Target Certifications
               </h3>
-              <p class="text-sm text-gray-300 leading-relaxed mb-2 text-left">
-                I built this project to deepen my understanding of containers
-                and modern backend infrastructure, knowing how central they are
-                to scalable, cloud-native applications. It deploys a Flask app
-                to AWS Fargate using Terraform and GitHub Actions. Key elements
-                include ECS, ALB, IAM, and secure VPC networking. We resolved a
-                container delay using CloudWatch Logs.
-              </p>
-              <h3 class="text-lg font-semibold text-white mb-2 mt-4">
-                Terraform + Static Website Frontend
-              </h3>
-              <p class="text-sm text-gray-300 leading-relaxed mb-2 text-left">
-                A lightweight frontend project deploying a secure static site
-                with S3, CloudFront, Route 53, and ACM — fully provisioned via
-                Terraform. It features HTTPS, subdomain routing, and CDN
-                caching, all without running servers. This project complements
-                the backend container deployment by showing how modern
-                infrastructure can deliver both dynamic and static content.
-              </p>
-
-              <div class="flex gap-4 mt-2">
-                <a
-                  href="https://github.com/Simodalstix/terraform-flask-devops-lab"
-                  target="_blank"
-                  class="text-cyan-400 text-sm underline hover:text-cyan-300"
-                >
-                  Flask Fargate Backend ↗
-                </a>
-                <a
-                  href="https://github.com/Simodalstix/terraform-static-website"
-                  target="_blank"
-                  class="text-cyan-400 text-sm underline hover:text-cyan-300"
-                >
-                  Static Website Frontend ↗
-                </a>
+              <div class="text-sm text-gray-300 space-y-3 leading-relaxed">
+                <p>
+                  My priority is landing a Junior Cloud or DevOps role where I
+                  can grow in a supportive, technically strong environment. I'm
+                  not chasing every cert — I'm looking for a role that allows me
+                  to flourish, apply what I’ve learned, and keep building
+                  real-world experience.
+                </p>
+                <p>
+                  Working with AWS or Google Cloud would honestly be a dream
+                  come true. The certifications I pursue next will naturally
+                  depend on the environment I join — whether that's AWS-heavy,
+                  Microsoft-focused, or leaning toward Google Cloud.
+                </p>
               </div>
             </div>
-
-            <!-- Centered Icon Grid at Bottom -->
-            <div class="flex justify-center mt-3">
+            <div class="flex justify-center gap-3 flex-wrap">
               <img
-                src="assets/images/career-pathways/terraform.svg"
-                alt="Terraform"
-                class="w-24 pr-2"
+                src="assets/images/skills-in-progress/aws-devops.png"
+                class="h-28 object-contain hover:scale-105 hover:opacity-90 transition duration-50"
               />
-              <div class="grid grid-flow-col grid-rows-2 gap-[4px] mt-3">
-                <img
-                  src="assets/images/skills-in-progress/flask-black.svg"
-                  alt="Flask"
-                  class="w-12 bg-white rounded"
-                />
-                <img
-                  src="assets/images/skills-in-progress/docker.svg"
-                  alt="Docker"
-                  class="w-12 rounded"
-                />
-                <img
-                  src="assets/images/skills-in-progress/fargate.svg"
-                  alt="Fargate"
-                  class="w-12 rounded"
-                />
+              <img
+                src="assets/images/career-pathways/Security.png"
+                class="h-28 object-contain hover:scale-105 hover:opacity-90 transition duration-50"
+              />
+              <img
+                src="assets/images/skills-in-progress/ace2.webp"
+                class="h-28 object-contain hover:scale-105 hover:opacity-90 transition duration-50"
+              />
+            </div>
+          </div>
 
-                <img
-                  src="assets/images/skills-in-progress/python.svg"
-                  alt="Python"
-                  class="w-12 rounded"
-                />
-                <img
-                  src="assets/images/skills-in-progress/cloudwatch.svg"
-                  alt="CloudWatch"
-                  class="w-12 rounded"
-                />
-                <div class="w-12 h-12 rounded opacity-0"></div>
-                <div class="w-12 h-12 rounded opacity-0"></div>
-                <div class="w-12 h-12 rounded opacity-0"></div>
-
-                <img
-                  src="assets/images/project-icons/ACM.svg"
-                  alt="ACM"
-                  class="w-12 rounded"
-                /><img
-                  src="assets/images/project-icons/S3.svg"
-                  alt="ACM"
-                  class="w-12 rounded"
-                /><img
-                  src="assets/images/project-icons/CloudFront.svg"
-                  alt="ACM"
-                  class="w-12 rounded"
-                /><img
-                  src="assets/images/project-icons/Route53.svg"
-                  alt="ACM"
-                  class="w-12 rounded"
-                />
+          <!-- Column 3 -->
+          <div
+            class="flex flex-col items-center text-center justify-between space-y-4 px-2"
+          >
+            <div>
+              <h3 class="text-lg font-semibold text-white mb-2">Exploration</h3>
+              <div class="text-sm text-gray-300 space-y-3 leading-relaxed">
+                <p>
+                  My ultimate goal is to become highly skilled in the difficult,
+                  high-leverage areas of DevOps and cloud platform engineering —
+                  the kind of work that involves orchestration, infrastructure
+                  resilience, deployment automation, and systems that scale
+                  cleanly under pressure.
+                </p>
+                <p>
+                  I’m going to become elite - I want to build deep, practical
+                  fluency with the real challenges modern teams face. From
+                  platform architecture to debugging production issues, I want
+                  to be the kind of engineer you can trust when things get
+                  complex. Hire me while you still can.
+                </p>
               </div>
+            </div>
+            <div class="flex justify-center gap-3">
+              <img
+                src="assets/images/skills-in-progress/kubernetes.svg"
+                class="h-28 object-contain hover:scale-105 hover:opacity-90 transition duration-50"
+              />
+              <img
+                src="assets/images/skills-in-progress/helm.svg"
+                class="h-28 object-contain hover:scale-105 hover:opacity-90 transition duration-50"
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Full Stack Developer Modal -->
+    <!-- Kubernetes Lab Modal -->
     <div
-      id="careerModal"
-      onclick="if(event.target===this) closeModal('careerModal')"
-      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-start pt-4 sm:pt-8 px-2"
+      id="k8sModal"
+      onclick="if(event.target===this) closeModal('k8sModal')"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-start pt-6 px-4"
     >
       <div
-        class="bg-gray-800 p-4 rounded w-11/12 md:w-3/4 relative text-gray-200 overflow-y-auto"
+        class="bg-gray-800 p-6 rounded-lg w-full max-w-[1280px] relative max-h-[93vh] overflow-y-auto shadow-xl"
       >
         <button
-          onclick="closeModal('fullstackModal')"
+          onclick="closeModal('k8sModal')"
           class="absolute top-2 right-2 text-xl text-gray-200"
         >
           &times;
         </button>
 
-        <h2 class="text-2xl font-extrabold text-cyan-400 mb-3 text-center">
-          Full Stack Developer Pathway
+        <h2 class="text-2xl font-extrabold text-cyan-400 mb-4 text-center">
+          Kubernetes Lab (In Progress)
         </h2>
 
-        <!-- Intro Paragraph -->
-        <div
-          class="mb-4 text-sm text-gray-300 leading-relaxed border-b border-purple-600 pb-2"
-        >
-          <p>
-            These projects reflect my full-stack journey — from frontend flows
-            to backend deployments. While I'm especially interested in DevOps
-            and infrastructure, I value full-stack experience for the deeper
-            understanding it gives me of the systems I support. I'm particularly
-            drawn to backend architecture and enjoy building APIs, working with
-            databases, and connecting frontend logic to real infrastructure. I'm
-            also helping my brother and a friend launch startup ideas through
-            early websites, payments, and collaboration.
-          </p>
-        </div>
+        <p class="italic text-sm text-center text-gray-400 mb-6">
+          "I choose to learn Kubernetes not because it is easy, but because it
+          is hard." – JFK (probably)
+        </p>
 
-        <!-- Row 1 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-2">
-          <!-- Support Desk -->
-          <div class="bg-gray-700 p-4 rounded">
-            <h4 class="font-semibold text-white mb-1">Support Desk</h4>
-            <p class="text-sm text-gray-300">
-              Ticketing platform with secure login, protected routes, and
-              role-based access. Built using React, Redux Toolkit, Express.js,
-              and JWT authentication. It includes ticket creation, user
-              registration, and protected access for admins and support agents.
+        <!-- Two-column grid for content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <!-- Column 1: Learning Journey -->
+          <div class="text-gray-300 text-sm leading-relaxed">
+            <p class="mb-4">
+              I'm diving into Kubernetes through by learning and following along
+              with a project-based course — by an expert. I'm curious, excited,
+              and ready to explore a technology that feels like a rite of
+              passage for modern DevOps. This is my first serious step into
+              container orchestration, and I'm treating it as a long-term
+              investment in my backend and cloud infrastructure skills.
             </p>
-            <div class="flex justify-between items-center mt-2 flex-wrap gap-2">
-              <div class="flex flex-wrap gap-[4px] items-center">
-                <img
-                  src="assets/images/career-pathways/react-2.svg"
-                  alt="React"
-                  class="w-12 rounded"
-                />
-                <img
-                  src="assets/images/career-pathways/redux.svg"
-                  alt="Redux Toolkit"
-                  class="w-12 rounded"
-                />
-                <img
-                  src="assets/images/career-pathways/expressjs-bgwhite.svg"
-                  alt="Express.js"
-                  class="w-12 rounded"
-                />
-                <img
-                  src="assets/images/career-pathways/jwt-3.svg"
-                  alt="JWT"
-                  class="w-12 rounded"
-                />
-              </div>
+            <p class="mb-4">
+              I've set up a clean environment using Devbox and I'll start
+              working through a guided project as time permits. Every tool is
+              new, but every challenge brings insight. My goal isn’t to rush —
+              it's to build confidence and fluency by understanding the
+              ecosystem from the inside out.
+            </p>
+            <p>
+              I'm approaching this with curiosity and patience — I want to truly
+              understand how infrastructure, configuration, and application
+              delivery fit together in Kubernetes, and use this lab as a
+              springboard for future projects.
+            </p>
+            <div class="mt-6 text-sm text-cyan-400 text-left">
               <a
-                href="https://github.com/Simodalstix/support-desk"
+                href="https://www.youtube.com/watch?v=2T86xAtR6Fo"
                 target="_blank"
-                class="text-cyan-400 underline text-sm whitespace-nowrap"
-                >Simodalstix/support-desk</a
+                class="block hover:underline"
               >
+                Youtube Course Link
+              </a>
             </div>
           </div>
 
-          <!-- ReStore -->
-          <div class="bg-gray-700 p-4 rounded">
-            <h4 class="font-semibold text-white mb-1">ReStore (Early Stage)</h4>
-            <p class="text-sm text-gray-300">
-              E-commerce app with a React + Redux frontend and .NET Core API
-              backend. Demonstrates end-to-end integration, shopping cart logic,
-              Stripe payments, product listing, and JWT-based user
-              authentication. Still early stage and planned for future growth.
-            </p>
-            <div class="flex justify-between items-center mt-2 flex-wrap gap-2">
-              <div class="flex flex-wrap gap-[4px] items-center">
-                <img
-                  src="assets/images/career-pathways/react-2.svg"
-                  alt="React"
-                  class="w-12 rounded"
-                />
-                <img
-                  src="assets/images/career-pathways/redux.svg"
-                  alt="Redux"
-                  class="w-12 rounded"
-                />
-                <img
-                  src="assets/images/career-pathways/net-core.svg"
-                  alt=".NET Core"
-                  class="w-12 rounded"
-                />
-                <img
-                  src="assets/images/career-pathways/jwt-3.svg"
-                  alt="JWT"
-                  class="w-12 rounded"
-                />
-                <img
-                  src="assets/images/career-pathways/stripe.svg"
-                  alt="Stripe"
-                  class="w-12 rounded"
-                />
-              </div>
+          <!-- Column 2: Tool Highlights -->
+          <div class="text-gray-300 text-sm leading-relaxed">
+            <h3 class="text-lg font-semibold text-white mb-2">
+              Tools I'm Learning
+            </h3>
+            <ul class="list-disc list-inside space-y-2">
+              <li>
+                <strong>Kubernetes:</strong> Understanding clusters,
+                deployments, and services from the ground up
+              </li>
+              <li>
+                <strong>Helm:</strong> Learning to manage reusable application
+                charts
+              </li>
+              <li>
+                <strong>K9s:</strong> Navigating and observing the cluster from
+                the terminal
+              </li>
+              <li>
+                <strong>kubectl:</strong> Getting hands-on with the core
+                command-line interface
+              </li>
+              <li>
+                <strong>Kustomize:</strong> Managing config overlays for
+                different environments
+              </li>
+              <li>
+                <strong>Devbox:</strong> Creating a reproducible and clean
+                tooling setup
+              </li>
+              <li>
+                <strong>Tilt:</strong> Accelerating local Kubernetes development
+                by managing live updates and feedback loops
+              </li>
+              <li>
+                <strong>Trivy:</strong> Scanning container images and configs
+                for vulnerabilities and misconfigurations
+              </li>
+            </ul>
+            <div class="mt-6 text-sm text-cyan-400 space-y-2 text-left">
               <a
-                href="https://github.com/Simodalstix/ReStore"
+                href="https://github.com/DevOpsDirective/devops-directive-kubernetes-course"
                 target="_blank"
-                class="text-cyan-400 underline text-sm whitespace-nowrap"
-                >Simodalstix/ReStore</a
+                class="block hover:underline"
               >
+                GitHub – Course Repo by DevOps Directive
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Row 2 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <!-- House Market Place -->
-          <div class="bg-gray-700 p-4 rounded">
-            <h4 class="font-semibold text-white mb-1">House Market Place</h4>
-            <p class="text-sm text-gray-300 mb-4">
-              Real estate listing app using React and Firebase. Supports user
-              sign-up with Firebase Auth, listing management with Firestore,
-              image uploads via cloud storage, and map-based property display.
-              Includes a responsive UI, basic filter logic, and clean layout.
-            </p>
-            <div class="flex justify-between items-center mt-2 flex-wrap gap-2">
-              <div class="flex flex-wrap gap-[4px] items-center">
-                <img
-                  src="assets/images/career-pathways/react-2.svg"
-                  alt="React"
-                  class="w-12 rounded"
-                />
-                <img
-                  src="assets/images/career-pathways/firebase.svg"
-                  alt="Firebase Auth"
-                  class="w-12 rounded"
-                />
-                <img
-                  src="assets/images/career-pathways/firestore.svg"
-                  alt="Firestore"
-                  class="w-12 rounded"
-                />
-                <img
-                  src="assets/images/career-pathways/google-cloud.svg"
-                  alt="Cloud Storage"
-                  class="w-12 rounded"
-                />
-              </div>
-              <a
-                href="https://github.com/Simodalstix/house-market-place"
-                target="_blank"
-                class="text-cyan-400 underline text-sm whitespace-nowrap"
-                >Simodalstix/house-market-place</a
-              >
-            </div>
-          </div>
-
-          <!-- Strapi Project -->
-          <div class="bg-gray-700 p-4 rounded">
-            <h4 class="font-semibold text-white mb-1">
-              Strapi + App Runner Project
-            </h4>
-            <p class="text-sm text-gray-300">
-              Full-stack build for a real client using Strapi CMS and PostgreSQL
-              Aurora Serverless. It will be deployed with App Runner and CI/CD
-              via GitHub Actions. Backend API is managed through Strapi’s admin
-              panel. Exploring AWS Amplify and Cognito for secure authentication
-              workflows.
-            </p>
-            <div class="flex flex-wrap gap-[4px] mt-2 items-center">
-              <img
-                src="assets/images/career-pathways/react-2.svg"
-                alt="React"
-                class="w-12 rounded"
-              />
-              <img
-                src="assets/images/career-pathways/strapi.svg"
-                alt="Strapi"
-                class="w-12 rounded"
-              />
-              <img
-                src="assets/images/career-pathways/apprunner.svg"
-                alt="App Runner"
-                class="w-12 rounded"
-              />
-              <img
-                src="assets/images/career-pathways/aurora.svg"
-                alt="Aurora"
-                class="w-12 rounded"
-              />
-              <img
-                src="assets/images/career-pathways/amplify.svg"
-                alt="Amplify/Cognito"
-                class="w-12 rounded"
-              />
-            </div>
+        <!-- Bottom Icon Row -->
+        <div class="border-t border-purple-600 pt-4 mt-2">
+          <div class="flex flex-wrap justify-center items-center gap-4">
+            <img
+              src="assets/images/k8s-icons/kubernetes.svg"
+              alt="Kubernetes"
+              class="w-24 h-24"
+            />
+            <img
+              src="assets/images/k8s-icons/helm2.png"
+              alt="Helm"
+              class="w-24 h-24"
+            />
+            <img
+              src="assets/images/k8s-icons/tilt.png"
+              alt="Tilt"
+              class="h-16 max-w-[7rem] object-contain"
+            /><img
+              src="assets/images/k8s-icons/trivy.svg"
+              alt="Trivy"
+              class="h-24 object-contain"
+            /><img
+              src="assets/images/k8s-icons/cloudnative-pg.png"
+              alt="Cloud Native PostgresSQL"
+              class="h-24 object-contain white p-1"
+            />
+            <img
+              src="assets/images/k8s-icons/kluctl.png"
+              alt="Kluctl"
+              class="h-24 object-contain"
+            />
+            <img
+              src="assets/images/k8s-icons/jetify2.jpeg"
+              alt="Devbox (Jetpack)"
+              class="h-24 object-contain rounded-md"
+            />
           </div>
         </div>
-
-        <!-- Footer -->
-        <footer
-          class="text-center text-sm text-gray-500 mt-4 pt-4 border-t border-gray-700"
-        >
-          Currently revisiting and revising concepts from
-          <a
-            href="https://fullstackopen.com/"
-            target="_blank"
-            class="text-purple-400 underline hover:text-purple-300"
-            >Fullstackopen.com</a
-          >
-          as a great reference.
-        </footer>
       </div>
     </div>
 
@@ -1068,6 +941,32 @@
         </div>
       </div>
     </div>
+
+    <div
+      id="piBlogModal"
+      onclick="if(event.target===this) closeModal('piBlogModal')"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center px-4"
+    >
+      <div class="bg-gray-800 p-6 rounded max-w-md w-full relative">
+        <button
+          onclick="closeModal('piBlogModal')"
+          class="absolute top-2 right-2 text-xl text-gray-200"
+        >
+          &times;
+        </button>
+        <h2
+          class="text-xl font-bold text-green-400 border-b-2 border-green-600 pb-2 mb-4"
+        >
+          Raspberry Pi Blog
+        </h2>
+        <p id="piStatusMessage" class="text-sm text-gray-300">
+          Checking connection...
+        </p>
+        I'll sort out CORS tomorrow
+        <p></p>
+      </div>
+    </div>
+
     <!-- collabmodal -->
     <div
       id="collabModal"
@@ -1299,6 +1198,27 @@
         </p>
       </div>
     </div>
+    <script>
+      function checkPiConnection() {
+        const statusElement = document.getElementById("piStatusMessage");
+        statusElement.innerText = "Checking connection...";
+
+        openModal("piBlogModal");
+
+        fetch("https://api.simostack.com/health", { method: "GET" })
+          .then((response) => {
+            if (response.ok) {
+              statusElement.innerText = "✅ Connection Established";
+            } else {
+              statusElement.innerText = `⚠️ Unexpected Response: ${response.status}`;
+            }
+          })
+          .catch((error) => {
+            statusElement.innerText = `❌ Connection Failed: ${error.message}`;
+          });
+      }
+    </script>
+
     <script>
       if (!location.href.startsWith("file://")) {
         fetch(
